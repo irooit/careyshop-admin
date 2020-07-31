@@ -27,6 +27,16 @@ export default {
   },
   created() {
     util.cookies.set('block', 'false')
+
+    if (process.env.VUE_APP_ISDEMO === 'true') {
+      this.$notify({
+        title: '警告',
+        message: '此站点仅供演示、学习所用，请勿进行非法操作、上传或发布违法资讯。',
+        position: 'bottom-right',
+        type: 'warning',
+        duration: 0
+      })
+    }
   }
 }
 </script>
