@@ -212,7 +212,7 @@
           label="使用安全链接"
           prop="email_ssl">
           <el-switch
-            v-model="smsForm.email_ssl"
+            v-model="emailForm.email_ssl"
             active-value="1"
             inactive-value="0">
           </el-switch>
@@ -222,7 +222,7 @@
           label="启用状态"
           prop="status">
           <el-switch
-            v-model="smsForm.status"
+            v-model="emailForm.status"
             active-value="1"
             inactive-value="0">
           </el-switch>
