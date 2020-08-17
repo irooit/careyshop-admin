@@ -89,11 +89,8 @@
 
       <el-table-column
         label="分类"
-        prop="article_cat_id"
+        prop="get_article_cat.cat_name"
         sortable="custom">
-        <template slot-scope="scope">
-          {{scope.row.get_article_cat.cat_name}}
-        </template>
       </el-table-column>
 
       <el-table-column
