@@ -8,13 +8,13 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'vue',
       library: 'Vue',
-      js: 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js',
       css: ''
     },
     {
       name: 'vue-router',
       library: 'VueRouter',
-      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.3.4/dist/vue-router.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.3/dist/vue-router.min.js',
       css: ''
     },
     {
@@ -44,7 +44,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'dayjs',
       library: 'dayjs',
-      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.31/dayjs.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.34/dayjs.min.js',
       css: ''
     },
     {
@@ -62,7 +62,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'lodash',
       library: '_',
-      js: 'https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js',
       css: ''
     },
     {
