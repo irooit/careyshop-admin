@@ -6,17 +6,13 @@
     size="mini"
     style="margin-bottom: -18px;">
     <el-form-item label="模块" prop="module">
-      <el-select
-        v-model="form.module"
-        placeholder="请选择"
-        style="width: 120px;"
-        clearable>
-        <el-option
-          v-for="(item, index) in module"
-          :key="index"
-          :label="item"
-          :value="index"/>
-      </el-select>
+      <el-radio-group v-model="form.module" size="small">
+        <el-radio-button>全部</el-radio-button>
+        <el-radio-button
+            v-for="(item, index) in module"
+            :key="index"
+            :label="index">{{item}}</el-radio-button>
+      </el-radio-group>
     </el-form-item>
 
     <el-form-item label="用户组" prop="group_id">
