@@ -26,7 +26,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'axios',
       library: 'axios',
-      js: 'https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js',
       css: ''
     },
     {
