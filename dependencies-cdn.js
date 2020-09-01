@@ -31,7 +31,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     },
     {
       name: 'better-scroll',
-      library: 'BScroll',
+      library: 'BetterScroll',
       js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.1/dist/better-scroll.min.js',
       css: ''
     },
