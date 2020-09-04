@@ -1240,8 +1240,8 @@ export default {
   },
   mounted() {
     Promise.all([
-      getBrandSelect({ order_field: 'phonetic' }),
-      getGoodsTypeSelect({ order_type: 'asc' }),
+      getBrandSelect({ order_field: 'phonetic', order_type: 'asc' }),
+      getGoodsTypeSelect({ order_field: 'goods_type_id', order_type: 'asc' }),
       getGoodsCategoryList(null)
     ])
       .then(res => {

@@ -187,7 +187,7 @@ export default {
   },
   mounted() {
     Promise.all([
-      getBrandSelect({ order_field: 'phonetic' }),
+      getBrandSelect({ order_field: 'phonetic', order_type: 'asc' }),
       getGoodsCategoryList(null)
     ])
       .then(res => {
