@@ -32,7 +32,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'better-scroll',
       library: 'BetterScroll',
-      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.1/dist/better-scroll.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.2/dist/better-scroll.min.js',
       css: ''
     },
     {
@@ -44,7 +44,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'dayjs',
       library: 'dayjs',
-      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.34/dayjs.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.35/dayjs.min.js',
       css: ''
     },
     {
