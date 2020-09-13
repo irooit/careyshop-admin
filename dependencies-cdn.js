@@ -32,7 +32,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'better-scroll',
       library: 'BetterScroll',
-      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.2/dist/better-scroll.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.3/dist/better-scroll.min.js',
       css: ''
     },
     {
@@ -98,7 +98,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'ua-parser-js',
       library: 'UAParser',
-      js: 'https://cdn.jsdelivr.net/npm/ua-parser-js@0.7.21/dist/ua-parser.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/ua-parser-js@0.7.22/dist/ua-parser.min.js',
       css: ''
     },
     {
