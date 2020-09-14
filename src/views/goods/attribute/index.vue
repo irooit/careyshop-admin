@@ -62,7 +62,7 @@ export default {
   },
   mounted() {
     Promise.all([
-      getGoodsTypeSelect({ order_type: 'asc' }),
+      getGoodsTypeSelect({ order_field: 'goods_type_id', order_type: 'asc' }),
       this.$store.dispatch('careyshop/db/databasePage', { user: true })
     ])
       .then(res => {
