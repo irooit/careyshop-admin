@@ -1,6 +1,6 @@
 {
   "name": "careyshop-admin",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
@@ -46,7 +46,7 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.1.0",
     "babel-eslint": "^10.1.0",
-    "compression-webpack-plugin": "^5.0.2",
+    "compression-webpack-plugin": "^6.0.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.9.0",
     "eslint-plugin-import": "^2.22.0",
