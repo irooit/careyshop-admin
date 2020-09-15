@@ -176,6 +176,7 @@ function reAuthorize() {
   MessageBox.confirm('您的授权已过期或在其他地方登录，是否重新登录？', '授权过期', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
+    closeOnClickModal: false,
     type: 'warning'
   })
     .then(() => {
