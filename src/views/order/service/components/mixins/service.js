@@ -423,6 +423,9 @@ export default {
               this.formComplete.visible = false
               this.$message.success('操作成功')
             })
+            .catch(() => {
+              this.formComplete.loading = false
+            })
         }
       })
     }
