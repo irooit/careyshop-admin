@@ -159,7 +159,10 @@
           </el-tooltip>
           <span
             @click="handleGive(scope.row.coupon_id)"
-            :class="{link: auth.use}">{{scope.row.name}}</span>
+            :class="{
+              'link': auth.use,
+              'cs-expired': dayjs().isAfter(dayjs(scope.row.use_end_time))
+            }">{{scope.row.name}}</span>
         </template>
       </el-table-column>
 
@@ -645,6 +648,7 @@ import {
 } from '@/api/marketing/coupon_give'
 import * as clipboard from 'clipboard-polyfill'
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import { getUserLevelList } from '@/api/user/level'
 import VueTableExport from '@careyshop/vue-table-export'
 
@@ -666,6 +670,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       currentTableData: [],
       multipleSelection: [],
       userLevel: [],

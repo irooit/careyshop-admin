@@ -49,7 +49,9 @@
             placement="top-start">
             <i class="el-icon-tickets cs-pr-5"/>
           </el-tooltip>
-          <span>{{scope.row.number}}</span>
+          <span :class="{
+            'cs-expired': dayjs().isAfter(dayjs(scope.row.get_card.end_time))
+          }">{{scope.row.number}}</span>
         </template>
       </el-table-column>
 
@@ -189,6 +191,7 @@
 
 <script>
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import { setCardUseInvalid } from '@/api/marketing/card_use'
 
 export default {
@@ -208,6 +211,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       infoVisible: false,
       currentTableData: [],
       multipleSelection: [],
