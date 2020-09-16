@@ -53,6 +53,9 @@
         sortable="custom"
         min-width="180"
         :show-overflow-tooltip="true">
+        <template slot-scope="scope">
+          <span :class="{'cs-expired': dayjs().isAfter(dayjs(scope.row.end_time))}">{{scope.row.name}}</span>
+        </template>
       </el-table-column>
 
       <el-table-column
@@ -419,6 +422,7 @@ import {
   setAdsItem
 } from '@/api/ads/ads'
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 
 export default {
   components: {
@@ -451,6 +455,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       adsType: undefined,
       content: { image: [], code: '' },
       currentTableData: [],
