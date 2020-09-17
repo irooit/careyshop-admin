@@ -432,6 +432,17 @@
       </el-form-item>
 
       <el-form-item
+          :label="form.stats_time.description"
+          prop="stats_time">
+        <el-input-number
+            v-model="form.stats_time.value"
+            :placeholder="form.stats_time.description"
+            controls-position="right"
+            :min="0"/>
+        <div class="help-block" v-html="form.stats_time.help_text"></div>
+      </el-form-item>
+
+      <el-form-item
         :label="form.card_auth.description"
         prop="card_auth"
         size="small">
