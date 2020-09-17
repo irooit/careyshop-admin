@@ -1,12 +1,14 @@
 <script>
-// 组件
 import csBackToTop from './components/cs-back-to-top'
-import csContainerFull from './components/cs-container-full'
-import csContainerFullBs from './components/cs-container-full-bs'
-import csContainerGhost from './components/cs-container-ghost'
-import csContainerGhostBs from './components/cs-container-ghost-bs'
-import csContainerCard from './components/cs-container-card'
-import csContainerCardBs from './components/cs-container-card-bs'
+
+const containers = {
+  full: () => import('./components/cs-container-full'),
+  fullbs: () => import('./components/cs-container-full-bs'),
+  ghost: () => import('./components/cs-container-ghost'),
+  ghostbs: () => import('./components/cs-container-ghost-bs'),
+  card: () => import('./components/cs-container-card'),
+  cardbs: () => import('./components/cs-container-card-bs')
+}
 
 export default {
   name: 'cs-container',
@@ -33,22 +35,10 @@ export default {
   computed: {
     // 始终返回渲染组件
     component() {
-      if (this.type === 'full') {
-        return this.betterScroll ? csContainerFullBs : csContainerFull
-      }
-
-      if (this.type === 'card') {
-        return this.betterScroll ? csContainerCardBs : csContainerCard
-      }
-
-      if (this.type === 'ghost') {
-        return this.betterScroll ? csContainerGhostBs : csContainerGhost
-      }
-
-      return 'div'
+      return containers[`${this.type}${this.betterScroll ? 'bs' : ''}`] || 'div'
     }
   },
-  render(/* h*/) {
+  render(h) {
     const slots = [
       this.$slots.default,
       this.$slots.header ? <template slot='header'>{ this.$slots.header }</template> : null,
@@ -70,7 +60,7 @@ export default {
   },
   activated() {
     // 恢复滚动位置
-    if (!this.betterScroll) {
+    if (!this.betterScroll && this.$refs.component) {
       this.$refs.component.scrollTo(this.csScroll.x, this.csScroll.y)
     }
   }
