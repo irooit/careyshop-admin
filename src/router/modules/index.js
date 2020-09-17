@@ -34,7 +34,8 @@ export default {
       hidden: true,
       component: {
         beforeRouteEnter(to, from, next) {
-          next(instance => instance.$router.replace(from.fullPath))
+          from.meta[`__stamp-${from.path}`] = Date.now()
+          next(instance => instance.$router.replace({ path: from.fullPath, meta: from.meta }))
         },
         render: h => h()
       }
