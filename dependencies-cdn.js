@@ -86,7 +86,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'sortablejs',
       library: 'Sortable',
-      js: 'https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/sortablejs@1.11.2/Sortable.min.js',
       css: ''
     },
     {
