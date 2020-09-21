@@ -15,10 +15,10 @@
     "@careyshop/vue-print": "^1.0.8",
     "@careyshop/vue-table-export": "^1.0.17",
     "axios": "^0.20.0",
-    "better-scroll": "^2.0.3",
+    "better-scroll": "^2.0.4",
     "clipboard-polyfill": "^3.0.1",
     "core-js": "^3.6.5",
-    "dayjs": "^1.8.35",
+    "dayjs": "^1.8.36",
     "element-ui": "^2.13.2",
     "flex.css": "^1.1.7",
     "fuse.js": "^6.4.1",
@@ -46,7 +46,7 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.1.0",
     "babel-eslint": "^10.1.0",
-    "compression-webpack-plugin": "^6.0.0",
+    "compression-webpack-plugin": "^6.0.2",
     "cross-env": "^7.0.2",
     "eslint": "^7.9.0",
     "eslint-plugin-import": "^2.22.0",
@@ -58,6 +58,6 @@
     "sass-loader": "^10.0.2",
     "svg-sprite-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.12",
-    "webpack-bundle-analyzer": "^3.8.0"
+    "webpack-bundle-analyzer": "^3.9.0"
   }
 }
