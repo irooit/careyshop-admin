@@ -42,6 +42,12 @@ if (process.env.VUE_APP_CDN === 'true') {
       css: 'https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css'
     },
     {
+      name: 'countup.js',
+      library: 'CountUp',
+      js: 'https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js',
+      css: ''
+    },
+    {
       name: 'dayjs',
       library: 'dayjs',
       js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.36/dayjs.min.js',
