@@ -6,6 +6,7 @@ import marketing from './modules/marketing'
 import order from './modules/order'
 import goods from './modules/goods'
 import finance from './modules/finance'
+import stats from './modules/stats'
 
 /**
  * 在主框架内显示
@@ -18,7 +19,8 @@ const frameIn = [
   marketing,
   order,
   goods,
-  finance
+  finance,
+  stats
 ]
 
 /**
