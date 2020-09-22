@@ -114,6 +114,18 @@ if (process.env.VUE_APP_CDN === 'true') {
       css: ''
     },
     {
+      name: 'echarts',
+      library: 'echarts',
+      js: 'https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js',
+      css: ''
+    },
+    {
+      name: 'v-charts',
+      library: 'VeIndex',
+      js: 'https://cdn.jsdelivr.net/npm/v-charts@1.19.0/lib/index.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/v-charts@1.19.0/lib/style.min.css'
+    },
+    {
       name: '@careyshop/vue-print',
       library: 'PrintCS',
       js: 'https://cdn.jsdelivr.net/npm/@careyshop/vue-print@1.0.8/dist/print.min.js',
