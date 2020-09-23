@@ -929,6 +929,10 @@ export default {
           delCouponList(coupon_id)
             .then(() => {
               util.deleteDataList(this.currentTableData, coupon_id, 'coupon_id')
+              if (this.currentTableData.length <= 0) {
+                this.$emit('refresh', true)
+              }
+
               this.$message.success('操作成功')
             })
         })

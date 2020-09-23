@@ -370,6 +370,10 @@ export default {
             delCouponGiveList(coupon_give_id)
               .then(() => {
                 util.deleteDataList(this.currentTableData, coupon_give_id, 'coupon_give_id')
+                if (this.currentTableData.length <= 0) {
+                  this.$emit('refresh', true)
+                }
+
                 this.$message.success('操作成功')
               })
           }
@@ -379,6 +383,10 @@ export default {
             recCouponGiveList(coupon_give_id)
               .then(() => {
                 util.deleteDataList(this.currentTableData, coupon_give_id, 'coupon_give_id')
+                if (this.currentTableData.length <= 0) {
+                  this.$emit('refresh', true)
+                }
+
                 this.$message.success('操作成功')
               })
           }
