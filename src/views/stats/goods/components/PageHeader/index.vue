@@ -7,7 +7,7 @@
       style="margin-bottom: -18px;">
     <el-form-item label="日期选择" prop="time_period">
       <el-date-picker
-          v-model="timePeriod"
+          v-model="form.time_period"
           type="daterange"
           range-separator="至"
           start-placeholder="起始日期"
@@ -45,9 +45,9 @@ export default {
     return {
       form: {
         begin_time: undefined,
-        end_time: undefined
+        end_time: undefined,
+        time_period: undefined
       },
-      timePeriod: null,
       pickerOptions: {
         shortcuts: [
           {
@@ -55,7 +55,7 @@ export default {
             onClick(picker) {
               const end = new Date()
               const start = new Date()
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 6)
               picker.$emit('pick', [start, end])
             }
           },
@@ -64,7 +64,7 @@ export default {
             onClick(picker) {
               const end = new Date()
               const start = new Date()
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 29)
               picker.$emit('pick', [start, end])
             }
           },
@@ -73,7 +73,7 @@ export default {
             onClick(picker) {
               const end = new Date()
               const start = new Date()
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 89)
               picker.$emit('pick', [start, end])
             }
           }
@@ -83,14 +83,13 @@ export default {
   },
   methods: {
     handleFormSubmit() {
-      if (!this.timePeriod || this.timePeriod.length !== 2) {
-        this.form = {}
-        return
+      let form = {}
+      if (this.form.time_period && this.form.time_period.length === 2) {
+        form.begin_time = dayjs(this.form.time_period[0]).format('YYYY-MM-DD 00:00:00')
+        form.end_time = dayjs(this.form.time_period[1]).format('YYYY-MM-DD 23:59:59')
       }
 
-      this.form.begin_time = dayjs(this.timePeriod[0]).format('YYYY-MM-DD 00:00:00')
-      this.form.end_time = dayjs(this.timePeriod[1]).format('YYYY-MM-DD 23:59:59')
-      console.log(this.form)
+      this.$emit('submit', form)
     },
     handleFormReset() {
       this.$refs.form.resetFields()

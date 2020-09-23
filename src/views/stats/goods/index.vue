@@ -27,13 +27,16 @@ export default {
   data() {
     return {
       loading: false,
+      chartData: {
+        columns: ['day', 'sales', 'views'],
+        rows: []
+      },
       todayData: {},
-      chartData: [],
       topData: []
     }
   },
   mounted() {
-    // this.handleSubmit()
+    this.handleSubmit()
   },
   methods: {
     handleSubmit(form) {
@@ -41,7 +44,7 @@ export default {
       getStatsData({ type: 'goods', ...form })
         .then(res => {
           this.todayData = get(res, 'data.today', {})
-          this.chartData = get(res, 'data.chart', [])
+          this.chartData.rows = get(res, 'data.chart', [])
           this.topData = get(res, 'data.top', [])
         })
         .finally(() => {
