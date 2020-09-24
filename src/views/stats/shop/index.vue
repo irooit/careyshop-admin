@@ -17,7 +17,6 @@
             </div>
 
             <ve-histogram
-              height="439px"
               :data="orderHoursData"
               :settings="{labelMap: {today: '今天', yesterday: '昨天'}}"/>
           </el-card>
@@ -31,7 +30,7 @@
             <el-table-column
               type="index"
               label="排行"
-              width="50">
+              width="56">
             </el-table-column>
 
             <el-table-column
@@ -47,6 +46,7 @@
             <el-table-column
               prop="sales_sum"
               label="销售量"
+              align="center"
               width="100">
             </el-table-column>
           </el-table>
@@ -154,6 +154,10 @@ export default {
 .table-card {
   border: 1px solid $color-border-1;
   border-bottom: none;
+
+  /deep/ td {
+    padding: 10px;
+  }
 }
 
 .link {
