@@ -3,10 +3,23 @@
     <div class="cs-p">
       <el-card class="box-card" shadow="never">
         <div slot="header" class="box-card-header">
-          <span>基础数据</span>
+          <span>今日实时</span>
         </div>
 
-        <div>111</div>
+        <div class="cs-today flex-wrap">
+          <div
+            v-for="(item, key) in todayData"
+            :key="key"
+            class="cs-today__block">
+            <div class="cs-today__content">
+              <div class="cs-today__info">
+                <p class="cs-today__title">{{baseMap[key]}}</p>
+                <p class="cs-today__number">{{item}}</p>
+                <p class="cs-today__yesterday">昨日：{{yesterdayData[key]}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </el-card>
 
       <el-row :gutter="20" class="cs-mt">
@@ -55,7 +68,7 @@
 
       <el-card class="box-card cs-mt" shadow="never">
         <div slot="header" class="box-card-header">
-          <span>月订单量</span>
+          <span>本月订单量</span>
         </div>
 
         <ve-line :data="orderMonthData" :settings="{labelMap: {count: '订单量合计'}}"/>
@@ -63,7 +76,7 @@
 
       <el-card class="box-card cs-mt" shadow="never">
         <div slot="header" class="box-card-header">
-          <span>月会员数</span>
+          <span>本月会员数</span>
         </div>
 
         <ve-histogram :data="clientMonthData" :settings="{labelMap: {count: '会员数合计'}}"/>
@@ -87,11 +100,11 @@ export default {
         order: '订单量',
         sales: '销售额',
         trade: '交易完成',
-        goods: '商品数',
-        collect: '收藏量',
-        client: '会员数',
-        service: '售后单数',
-        withdraw: '提现单数'
+        goods: '新增商品数',
+        collect: '新增收藏量',
+        client: '新增会员数',
+        service: '新增售后单',
+        withdraw: '新增提现单'
       },
       goodsData: [],
       todayData: {},
@@ -176,7 +189,7 @@ export default {
 
 .cs-today {
   .cs-today__block {
-    width: 20%;
+    width: 25%;
     box-sizing: border-box;
   }
 
@@ -200,9 +213,17 @@ export default {
       text-overflow: ellipsis;
     }
 
+    .cs-today__title {
+      color: $color-text-main;
+    }
+
     .cs-today__number {
       color: $color-text-normal;
       font-size: 28px;
+    }
+
+    .cs-today__yesterday {
+      font-size: 13px;
     }
   }
 }
