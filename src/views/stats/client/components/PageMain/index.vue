@@ -19,11 +19,66 @@
         </div>
       </div>
     </el-card>
+
+    <el-row :gutter="20" class="cs-mt">
+      <el-col :span="14">
+        <el-card class="box-card" shadow="never">
+          <div slot="header" class="box-card-header">
+            <span>趋势</span>
+          </div>
+
+          <ve-line :data="loginData" :settings="chartSettings"/>
+        </el-card>
+      </el-col>
+
+      <el-col :span="10">
+        <el-card class="box-card" shadow="never">
+          <div slot="header" class="box-card-header">
+            <span>会员等级</span>
+          </div>
+
+          <ve-pie :data="levelData"/>
+        </el-card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+import charts from '@/plugin/careyshop/charts'
+
 export default {
+  mixins: [
+    charts
+  ],
+  props: {
+    todayData: {
+      default: () => {}
+    },
+    levelData: {
+      default: () => {}
+    },
+    loginData: {
+      default: () => {}
+    }
+  },
+  data() {
+    return {
+      todayMap: {
+        count: '客户合计',
+        enable: '正常会员',
+        disable: '停用会员',
+        new: '今日新增',
+        active: '活跃会员'
+      },
+      chartSettings: {
+        labelMap: {
+          day: '日期',
+          count: '注册量'
+        }
+      }
+    }
+  }
 }
 </script>
 
@@ -36,11 +91,6 @@ export default {
 .box-card-header {
   font-size: 14px;
   color: $color-text-normal;
-}
-
-.table-card {
-  border: 1px solid $color-border-1;
-  border-bottom: none;
 }
 
 .flex-wrap {
