@@ -21,7 +21,32 @@
         </el-col>
 
         <el-col :span="10">
-          <div>222</div>
+          <el-table
+            :data="goodsData"
+            :header-cell-style="{padding: '8px 0'}"
+            class="table-card">
+            <el-table-column
+              type="index"
+              label="排行"
+              width="50">
+            </el-table-column>
+
+            <el-table-column
+              label="名称"
+              show-overflow-tooltip>
+              <template slot-scope="scope">
+              <span
+                @click="handleView(scope.row.goods_id)"
+                class="link">{{scope.row.name}}</span>
+              </template>
+            </el-table-column>
+
+            <el-table-column
+              prop="sales_sum"
+              label="销售量"
+              width="100">
+            </el-table-column>
+          </el-table>
         </el-col>
       </el-row>
 

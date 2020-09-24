@@ -27,14 +27,14 @@
             <span>趋势</span>
           </div>
 
-          <ve-line height="440px" :data="chartData" :settings="chartSettings"/>
+          <ve-line height="439px" :data="chartData" :settings="chartSettings"/>
         </el-card>
       </el-col>
 
       <el-col :span="10">
         <el-table
           :data="topData"
-          :header-cell-style="{padding: '9px 0'}"
+          :header-cell-style="{padding: '8px 0'}"
           class="table-card">
           <el-table-column
             type="index"
