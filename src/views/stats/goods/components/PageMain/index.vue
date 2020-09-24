@@ -27,7 +27,7 @@
             <span>趋势</span>
           </div>
 
-          <ve-line :data="chartData" :settings="chartSettings"/>
+          <ve-line height="440px" :data="chartData" :settings="chartSettings"/>
         </el-card>
       </el-col>
 
