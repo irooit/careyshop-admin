@@ -10,7 +10,8 @@
       :loading="loading"
       :today-data="todayData"
       :level-data="levelData"
-      :login-data="loginData"/>
+      :login-data="loginData"
+      :update-time="updateTime"/>
   </cs-container>
 </template>
 
@@ -35,7 +36,8 @@ export default {
       loginData: {
         columns: ['day', 'count'],
         rows: []
-      }
+      },
+      updateTime: ''
     }
   },
   mounted() {
@@ -49,6 +51,7 @@ export default {
           this.todayData = get(res, 'data.today', {})
           this.levelData.rows = get(res, 'data.chart.level', [])
           this.loginData.rows = get(res, 'data.chart.login', [])
+          this.updateTime = get(res, 'data.update_time')
         })
         .finally(() => {
           this.loading = false

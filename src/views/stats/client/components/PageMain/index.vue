@@ -3,6 +3,7 @@
     <el-card class="box-card" shadow="never">
       <div slot="header" class="box-card-header">
         <span>今日实时</span>
+        <span class="update-time">更新时间：{{updateTime}}</span>
       </div>
 
       <div class="cs-today flex-wrap">
@@ -60,6 +61,9 @@ export default {
     },
     loginData: {
       default: () => {}
+    },
+    updateTime: {
+      default: ''
     }
   },
   data() {
@@ -82,6 +86,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.update-time {
+  font-size: 12px;
+  color: $color-info;
+  float: right;
+}
+
 .box-card {
   border-radius: 0;
   border: 1px solid $color-border-1;

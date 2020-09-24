@@ -10,7 +10,8 @@
       :loading="loading"
       :today-data="todayData"
       :order-data="orderData"
-      :source-data="sourceData"/>
+      :source-data="sourceData"
+      :update-time="updateTime"/>
   </cs-container>
 </template>
 
@@ -35,7 +36,8 @@ export default {
       sourceData: {
         columns: ['name', 'count'],
         rows: []
-      }
+      },
+      updateTime: ''
     }
   },
   mounted() {
@@ -49,6 +51,7 @@ export default {
           this.todayData = get(res, 'data.today', {})
           this.orderData.rows = get(res, 'data.chart.order', [])
           this.sourceData.rows = get(res, 'data.chart.source', [])
+          this.updateTime = get(res, 'data.update_time')
         })
         .finally(() => {
           this.loading = false

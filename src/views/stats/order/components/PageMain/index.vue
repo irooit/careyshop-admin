@@ -3,6 +3,7 @@
     <el-card class="box-card" shadow="never">
       <div slot="header" class="box-card-header">
         <span>今日实时</span>
+        <span class="update-time">更新时间：{{updateTime}}</span>
       </div>
 
       <div class="cs-today flex-wrap">
@@ -60,6 +61,9 @@ export default {
     },
     sourceData: {
       default: () => {}
+    },
+    updateTime: {
+      default: ''
     }
   },
   data() {
@@ -67,6 +71,7 @@ export default {
       todayMap: {
         order: '订单量',
         sales: '销售额',
+        service: '售后单',
         not_paid: '待付款',
         paid: '已付款',
         not_shipped: '待发货',
@@ -92,6 +97,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.update-time {
+  font-size: 12px;
+  color: $color-info;
+  float: right;
+}
+
 .box-card {
   border-radius: 0;
   border: 1px solid $color-border-1;
@@ -110,7 +121,7 @@ export default {
 
 .cs-today {
   .cs-today__block {
-    width: 20%;
+    width: 25%;
     box-sizing: border-box;
   }
 

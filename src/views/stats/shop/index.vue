@@ -4,6 +4,7 @@
       <el-card class="box-card" shadow="never">
         <div slot="header" class="box-card-header">
           <span>今日实时</span>
+          <span class="update-time">更新时间：{{updateTime}}</span>
         </div>
 
         <div class="cs-today flex-wrap">
@@ -120,7 +121,8 @@ export default {
       clientMonthData: {
         columns: ['day', 'count'],
         rows: []
-      }
+      },
+      updateTime: ''
     }
   },
   mounted() {
@@ -139,6 +141,7 @@ export default {
             this.orderHoursData.rows = data.order_hours
             this.orderMonthData.rows = data.order_month
             this.clientMonthData.rows = data.client_month
+            this.updateTime = data.update_time
           }
         })
     },
@@ -154,6 +157,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.update-time {
+  font-size: 12px;
+  color: $color-info;
+  float: right;
+}
+
 .box-card {
   border-radius: 0;
   border: 1px solid $color-border-1;

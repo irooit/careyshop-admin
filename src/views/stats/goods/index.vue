@@ -10,7 +10,8 @@
         :loading="loading"
         :today-data="todayData"
         :chart-data="chartData"
-        :top-data="topData"/>
+        :top-data="topData"
+        :update-time="updateTime"/>
   </cs-container>
 </template>
 
@@ -32,7 +33,8 @@ export default {
         rows: []
       },
       todayData: {},
-      topData: []
+      topData: [],
+      updateTime: ''
     }
   },
   mounted() {
@@ -46,6 +48,7 @@ export default {
           this.todayData = get(res, 'data.today', {})
           this.chartData.rows = get(res, 'data.chart', [])
           this.topData = get(res, 'data.top', [])
+          this.updateTime = get(res, 'data.update_time')
         })
         .finally(() => {
           this.loading = false
