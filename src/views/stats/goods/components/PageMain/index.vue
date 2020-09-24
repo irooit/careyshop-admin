@@ -5,7 +5,19 @@
         <span>今日实时</span>
       </div>
 
-      <div>111</div>
+      <div class="cs-today flex-wrap">
+        <div
+          v-for="(item, key) in todayData"
+          :key="key"
+          class="cs-today__block">
+          <div class="cs-today__content">
+            <div class="cs-today__info">
+              <p>{{todayMap[key]}}</p>
+              <p class="cs-today__number">{{item}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </el-card>
 
     <el-row :gutter="20" class="cs-mt">
@@ -71,6 +83,14 @@ export default {
   },
   data() {
     return {
+      todayMap: {
+        new: '新增数',
+        online: '上架中',
+        offline: '已下架',
+        views: '游览量',
+        sales: '销售数',
+        collect: '收藏量'
+      },
       chartSettings: {
         labelMap: {
           day: '日期',
@@ -113,6 +133,45 @@ export default {
       cursor: pointer;
       color: $color-primary;
       text-decoration: underline;
+    }
+  }
+
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  .cs-today {
+    .cs-today__block {
+      width: 16.6%;
+      box-sizing: border-box;
+    }
+
+    .cs-today__content {
+      display: flex;
+      color: $color-info;
+      border-radius: 4px;
+      background-color: #F5F7FA;
+      margin: 10px;
+      overflow: hidden;
+    }
+
+    .cs-today__info {
+      width: 100%;
+      text-align: center;
+
+      p {
+        margin: 10px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .cs-today__number {
+        color: $color-text-normal;
+        font-size: 28px;
+      }
     }
   }
 </style>
