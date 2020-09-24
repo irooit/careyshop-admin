@@ -16,7 +16,10 @@
               <span>实时订单</span>
             </div>
 
-            <div>111</div>
+            <ve-histogram
+              height="439px"
+              :data="orderHoursData"
+              :settings="{labelMap: {today: '今天', yesterday: '昨天'}}"/>
           </el-card>
         </el-col>
 
@@ -55,7 +58,7 @@
           <span>月订单量</span>
         </div>
 
-        <div>111</div>
+        <ve-line :data="orderMonthData" :settings="{labelMap: {count: '订单量合计'}}"/>
       </el-card>
 
       <el-card class="box-card cs-mt" shadow="never">
@@ -63,7 +66,7 @@
           <span>月会员数</span>
         </div>
 
-        <div>111</div>
+        <ve-histogram :data="clientMonthData" :settings="{labelMap: {count: '会员数合计'}}"/>
       </el-card>
     </div>
   </cs-container>
@@ -81,7 +84,7 @@ export default {
   data() {
     return {
       baseMap: {
-        order: '订单数',
+        order: '订单量',
         sales: '销售额',
         trade: '交易完成',
         goods: '商品数',

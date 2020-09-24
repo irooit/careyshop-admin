@@ -93,7 +93,6 @@ export default {
       },
       chartSettings: {
         labelMap: {
-          day: '日期',
           sales: '销售量',
           views: '游览量'
         }

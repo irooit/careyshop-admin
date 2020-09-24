@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       todayMap: {
-        order: '订单数',
+        order: '订单量',
         sales: '销售额',
         not_paid: '待付款',
         paid: '已付款',
@@ -75,7 +75,6 @@ export default {
       },
       chartSettings: {
         labelMap: {
-          day: '日期',
           order: '下单数',
           payment: '付款数',
           percent: '支付率'

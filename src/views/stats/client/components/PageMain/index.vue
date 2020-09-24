@@ -73,7 +73,6 @@ export default {
       },
       chartSettings: {
         labelMap: {
-          day: '日期',
           count: '注册量'
         }
       }
