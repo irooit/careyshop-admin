@@ -21,7 +21,7 @@ import { getStatsData } from '@/api/aided/stats'
 export default {
   name: 'stats-data-goods',
   components: {
-    PageHeader: () => import('./components/PageHeader'),
+    PageHeader: () => import('../index/components/PageHeader'),
     PageMain: () => import('./components/PageMain')
   },
   data() {
