@@ -105,15 +105,15 @@ export default {
 </script>
 
 <style scoped>
-  .button-new-tag {
-    height: 32px;
-    line-height: 30px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+.button-new-tag {
+  height: 32px;
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
-  .input-new-tag {
-    width: 90px;
-    vertical-align: bottom;
-  }
+.input-new-tag {
+  width: 90px;
+  vertical-align: bottom;
+}
 </style>

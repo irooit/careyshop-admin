@@ -119,8 +119,8 @@ export default {
 </script>
 
 <style scoped>
-  .not-trace {
-    color: #99A9BF;
-    text-align: center;
-  }
+.not-trace {
+  color: #99A9BF;
+  text-align: center;
+}
 </style>

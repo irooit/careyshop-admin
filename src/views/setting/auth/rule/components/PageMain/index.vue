@@ -703,53 +703,53 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tree-scroll {
-    max-height: 615px;
-    overflow: auto;
-    padding-bottom: 1px;
-  }
+.tree-scroll {
+  max-height: 615px;
+  overflow: auto;
+  padding-bottom: 1px;
+}
 
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-right: 8px;
-  }
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
 
-  .brother-showing i {
-    width: 16px;
-  }
+.brother-showing i {
+  width: 16px;
+}
 
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: block;
-  }
+.action:hover .active {
+  display: block;
+}
 
-  .move-tree {
-    color: $color-text-placehoder;
-    cursor: move;
-  }
+.move-tree {
+  color: $color-text-placehoder;
+  cursor: move;
+}
 
-  .status-tree {
-    color: $color-text-placehoder;
-    text-decoration: line-through;
-  }
+.status-tree {
+  color: $color-text-placehoder;
+  text-decoration: line-through;
+}
 
-  .log-auth {
-    color: $color-text-placehoder;
-  }
+.log-auth {
+  color: $color-text-placehoder;
+}
 
-  .whitelist {
-    color: $color-success;
-  }
+.whitelist {
+  color: $color-success;
+}
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
 </style>

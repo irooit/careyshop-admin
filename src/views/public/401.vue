@@ -27,13 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .page {
-    height: 100%;
-    @extend %flex-center-col;
+.page {
+  height: 100%;
+  @extend %flex-center-col;
 
-    .page_title {
-      font-size: 20px;
-      color: $color-text-main;
-    }
+  .page_title {
+    font-size: 20px;
+    color: $color-text-main;
   }
+}
 </style>

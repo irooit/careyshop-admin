@@ -479,9 +479,9 @@ export default {
 </script>
 
 <style scoped>
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 </style>

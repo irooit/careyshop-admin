@@ -246,8 +246,8 @@ export default {
 </script>
 
 <style scoped>
-  .tinymce-textarea {
-    display: none;
-    z-index: -1;
-  }
+.tinymce-textarea {
+  display: none;
+  z-index: -1;
+}
 </style>

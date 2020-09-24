@@ -515,18 +515,18 @@ export default {
 </script>
 
 <style scoped>
-  .table-expand {
-    font-size: 0;
-    padding: 0 10px;
-  }
+.table-expand {
+  font-size: 0;
+  padding: 0 10px;
+}
 
-  .table-expand >>> label {
-    width: auto;
-    color: #99A9BF;
-  }
+.table-expand >>> label {
+  width: auto;
+  color: #99A9BF;
+}
 
-  .table-expand .el-form-item {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
+.table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+}
 </style>

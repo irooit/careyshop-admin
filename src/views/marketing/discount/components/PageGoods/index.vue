@@ -247,15 +247,15 @@ export default {
 </script>
 
 <style scoped>
-  .discount-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-  }
+.discount-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
 
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 </style>

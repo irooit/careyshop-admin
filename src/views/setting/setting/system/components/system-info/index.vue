@@ -605,32 +605,32 @@ export default {
 </script>
 
 <style scoped>
-  .popover-image {
-    text-align: center;
-    line-height: 0;
-  }
+.popover-image {
+  text-align: center;
+  line-height: 0;
+}
 
-  .popover-image >>> img {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.popover-image >>> img {
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-  .el-image >>> .el-image__error {
-    line-height: 1.4;
-  }
+.el-image >>> .el-image__error {
+  line-height: 1.4;
+}
 
-  .dynamic-domain {
-    margin-right: 10px;
-    width: 320px;
-  }
+.dynamic-domain {
+  margin-right: 10px;
+  width: 320px;
+}
 
-  .dynamic-platform-key {
-    margin-right: 10px;
-    width: 120px;
-  }
+.dynamic-platform-key {
+  margin-right: 10px;
+  width: 120px;
+}
 
-  .dynamic-platform-value {
-    margin-right: 10px;
-    width: 190px;
-  }
+.dynamic-platform-value {
+  margin-right: 10px;
+  width: 190px;
+}
 </style>

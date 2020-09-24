@@ -373,22 +373,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .message-badge {
-    display: inline-flex;
-  }
+.message-badge {
+  display: inline-flex;
+}
 
-  .message-title:hover {
-    color: $color-primary;
-    cursor: pointer;
-    text-decoration: underline;
-  }
+.message-title:hover {
+  color: $color-primary;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
-  .read {
-    color: $color-text-placehoder;
-  }
+.read {
+  color: $color-text-placehoder;
+}
 
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
-  }
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
 </style>

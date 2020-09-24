@@ -777,17 +777,17 @@ export default {
 </script>
 
 <style scoped>
-  .popover-image {
-    text-align: center;
-    line-height: 0;
-  }
+.popover-image {
+  text-align: center;
+  line-height: 0;
+}
 
-  .popover-image >>> img {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.popover-image >>> img {
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-  .el-image >>> .el-image__error {
-    line-height: 1.4;
-  }
+.el-image >>> .el-image__error {
+  line-height: 1.4;
+}
 </style>

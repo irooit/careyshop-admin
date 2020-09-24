@@ -306,116 +306,116 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .magnify {
-    position: relative;
-  }
+.magnify {
+  position: relative;
+}
 
-  .left-contaner {
-    width: 100%;
-    height: 100%;
+.left-contaner {
+  width: 100%;
+  height: 100%;
 
-    .carousel {
-      margin-top: 20px;
-      display: inline-flex;
+  .carousel {
+    margin-top: 20px;
+    display: inline-flex;
 
-      .show-box {
-        flex: 1;
-        overflow: hidden;
-        position: relative;
-
-        ul {
-          margin: 0;
-          padding: 0;
-        }
-      }
-
-      .arrow {
-        @extend %flex-center-row;
-        @extend %unable-select;
-        font-size: 25px;
-        font-weight: 700;
-        flex-basis: 25px;
-        color: $color-border-1;
-      }
-
-      .picture-container {
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-
-        .picture-item {
-          @extend %flex-center-row;
-          float: left;
-          box-sizing: border-box;
-          list-style: none;
-          border: 2px solid #FFFFFF;
-
-          &.selected {
-            border-color: $color-danger;
-          }
-        }
-      }
-    }
-
-    .middle-img {
-      @extend %flex-center-row;
-      border: 1px solid $color-border-4;
-      box-sizing: border-box;
-      position: relative;
+    .show-box {
+      flex: 1;
       overflow: hidden;
+      position: relative;
 
-      &.video-bg {
-        border-color: #FFFFFF;
-      }
-
-      .video-box {
-        width: 100%;
-        text-align: center;
-        z-index: 1;
-      }
-
-      .video-button {
-        @extend %unable-select;
-        font-size: 38px;
-        color: $color-text-sub;
-        position: absolute;
-        z-index: 2;
-
-        &.play {
-          bottom: 10px;
-          left: 10px;
-        }
-
-        &.stop {
-          top: 10px;
-          right: 10px;
-        }
+      ul {
+        margin: 0;
+        padding: 0;
       }
     }
 
-    .shade {
-      cursor: move;
-      background-color: rgba($color-primary, .3);
-      position: absolute;
+    .arrow {
+      @extend %flex-center-row;
+      @extend %unable-select;
+      font-size: 25px;
+      font-weight: 700;
+      flex-basis: 25px;
+      color: $color-border-1;
+    }
 
-      &.video-play {
-        cursor: auto;
-        background-color: transparent;
+    .picture-container {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+
+      .picture-item {
+        @extend %flex-center-row;
+        float: left;
+        box-sizing: border-box;
+        list-style: none;
+        border: 2px solid #FFFFFF;
+
+        &.selected {
+          border-color: $color-danger;
+        }
       }
     }
   }
 
-  .right-contanier {
-    position: absolute;
-    overflow: hidden;
+  .middle-img {
+    @extend %flex-center-row;
     border: 1px solid $color-border-4;
-    background: #FFFFFF;
-    margin-left: -1px;
-    z-index: 1;
-    top: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 
-    .big-img {
+    &.video-bg {
+      border-color: #FFFFFF;
+    }
+
+    .video-box {
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .video-button {
+      @extend %unable-select;
+      font-size: 38px;
+      color: $color-text-sub;
       position: absolute;
+      z-index: 2;
+
+      &.play {
+        bottom: 10px;
+        left: 10px;
+      }
+
+      &.stop {
+        top: 10px;
+        right: 10px;
+      }
     }
   }
+
+  .shade {
+    cursor: move;
+    background-color: rgba($color-primary, .3);
+    position: absolute;
+
+    &.video-play {
+      cursor: auto;
+      background-color: transparent;
+    }
+  }
+}
+
+.right-contanier {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid $color-border-4;
+  background: #FFFFFF;
+  margin-left: -1px;
+  z-index: 1;
+  top: 0;
+
+  .big-img {
+    position: absolute;
+  }
+}
 </style>

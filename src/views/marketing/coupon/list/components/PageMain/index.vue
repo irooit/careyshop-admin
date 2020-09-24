@@ -1296,38 +1296,38 @@ export default {
 </script>
 
 <style scoped>
-  .help-block {
-    color: #909399;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -8px;
-  }
+.help-block {
+  color: #909399;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -8px;
+}
 
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 
-  .table-expand {
-    font-size: 0;
-    padding: 0 65px;
-  }
+.table-expand {
+  font-size: 0;
+  padding: 0 65px;
+}
 
-  .table-expand >>> label {
-    float: left;
-    width: 120px;
-    color: #99A9BF;
-  }
+.table-expand >>> label {
+  float: left;
+  width: 120px;
+  color: #99A9BF;
+}
 
-  .table-expand >>> .el-form-item__content {
-    display: block;
-    padding-left: 120px;
-  }
+.table-expand >>> .el-form-item__content {
+  display: block;
+  padding-left: 120px;
+}
 
-  .table-expand .el-form-item {
-    margin-right: 0;
-    margin-bottom: 0;
-    width: 50%;
-  }
+.table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 50%;
+}
 </style>

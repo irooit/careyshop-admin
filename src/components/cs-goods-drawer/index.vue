@@ -33,8 +33,8 @@ export default {
 </script>
 
 <style scoped>
-  .view-goods >>> .el-drawer__body {
-    height: auto;
-    overflow: auto;
-  }
+.view-goods >>> .el-drawer__body {
+  height: auto;
+  overflow: auto;
+}
 </style>

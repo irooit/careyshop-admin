@@ -88,27 +88,27 @@ export default {
 </script>
 
 <style scoped>
-  .cs-preview >>> .el-image-viewer__close {
-    color: #FFF;
-  }
+.cs-preview >>> .el-image-viewer__close {
+  color: #FFF;
+}
 
-  .cs-image >>> .el-image-viewer__close {
-    position: fixed;
-  }
+.cs-image >>> .el-image-viewer__close {
+  position: fixed;
+}
 
-  .cs-image >>> .el-dialog {
-    margin: 0 !important;
-    border-radius: 0;
-    box-shadow: none;
-    background: inherit;
-  }
+.cs-image >>> .el-dialog {
+  margin: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
+  background: inherit;
+}
 
-  .cs-image >>> .el-dialog__header {
-    display: none;
-  }
+.cs-image >>> .el-dialog__header {
+  display: none;
+}
 
-  .cs-image >>> .el-dialog__body {
-    padding: 0;
-    text-align: center;
-  }
+.cs-image >>> .el-dialog__body {
+  padding: 0;
+  text-align: center;
+}
 </style>

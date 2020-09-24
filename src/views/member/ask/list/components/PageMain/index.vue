@@ -202,15 +202,15 @@ export default {
 </script>
 
 <style scoped>
-  .ask-title:hover {
-    color: #409EFF;
-    cursor: pointer;
-    text-decoration: underline;
-  }
+.ask-title:hover {
+  color: #409EFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 </style>

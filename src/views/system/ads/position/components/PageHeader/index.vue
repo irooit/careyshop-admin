@@ -137,15 +137,15 @@ export default {
 </script>
 
 <style scoped>
-  .more-filter {
-    margin-bottom: -18px;
-  }
+.more-filter {
+  margin-bottom: -18px;
+}
 
-  .more-filter >>> label {
-    width: 70px;
-  }
+.more-filter >>> label {
+  width: 70px;
+}
 
-  .more-filter >>> .el-form-item__content {
-    margin-left: 70px;
-  }
+.more-filter >>> .el-form-item__content {
+  margin-left: 70px;
+}
 </style>

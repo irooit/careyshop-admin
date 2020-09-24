@@ -204,47 +204,47 @@ export default {
 </script>
 
 <style scoped>
-  .box-card {
-    border-radius: 0;
-    border: 1px solid #DCDFE6;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid #DCDFE6;
+}
 
-  .box-card-header {
-    font-size: 14px;
-    color: #606266;
-  }
+.box-card-header {
+  font-size: 14px;
+  color: #606266;
+}
 
-  .text-explode {
-    color: #909399;
-  }
+.text-explode {
+  color: #909399;
+}
 
-  .user-icon {
-    float: left;
-    width: 36px;
-  }
+.user-icon {
+  float: left;
+  width: 36px;
+}
 
-  .user-name {
-    color: #909399;
-    font-size: 13px;
-  }
+.user-name {
+  color: #909399;
+  font-size: 13px;
+}
 
-  .problem {
-    float: left;
-    width: 90%;
-    margin: 0 0 20px 20px;
-  }
+.problem {
+  float: left;
+  width: 90%;
+  margin: 0 0 20px 20px;
+}
 
-  .ask-content {
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    *white-space: pre;
-  }
+.ask-content {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  *white-space: pre;
+}
 
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 </style>

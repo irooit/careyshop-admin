@@ -296,27 +296,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .user-control {
-    width: auto;
-    display: inline;
+.user-control {
+  width: auto;
+  display: inline;
+}
+
+.user-info {
+  float: left;
+
+  .username {
+    width: 160px;
+    line-height: 14px;
+    overflow: hidden;
   }
 
-  .user-info {
-    float: left;
-
-    .username {
-      width: 160px;
-      line-height: 14px;
-      overflow: hidden;
-    }
-
-    .level {
-      margin: 0;
-    }
+  .level {
+    margin: 0;
   }
+}
 
-  .level-icon {
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 </style>

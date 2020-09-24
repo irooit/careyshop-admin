@@ -848,113 +848,113 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
 
-    .card-title {
-      margin-top: 0;
-    }
-
-    .order-info {
-      display: table;
-      font-size: 14px;
-      line-height: 28px;
-
-      .dt {
-        float: left;
-        width: 100px;
-        color: #99A9BF;
-      }
-
-      .dd {
-        padding-left: 100px;
-      }
-
-      .number {
-        width: 150px;
-        text-align: right;
-      }
-    }
+  .card-title {
+    margin-top: 0;
   }
 
-  .order-left {
-    margin-bottom: 20px;
-    border-right: 1px solid $color-border-1;
+  .order-info {
+    display: table;
+    font-size: 14px;
+    line-height: 28px;
 
-    .level-icon {
-      margin-left: 5px;
-      line-height: 0;
-      vertical-align: text-bottom;
+    .dt {
+      float: left;
+      width: 100px;
+      color: #99A9BF;
+    }
+
+    .dd {
+      padding-left: 100px;
+    }
+
+    .number {
+      width: 150px;
+      text-align: right;
     }
   }
+}
 
-  .order-remark {
-    font-size: 13px;
-    line-height: 32px;
-    color: $color-text-placehoder;
+.order-left {
+  margin-bottom: 20px;
+  border-right: 1px solid $color-border-1;
+
+  .level-icon {
+    margin-left: 5px;
+    line-height: 0;
+    vertical-align: text-bottom;
   }
+}
 
-  .goods-image {
-    float: left;
-    width: 60px;
-    height: 60px;
+.order-remark {
+  font-size: 13px;
+  line-height: 32px;
+  color: $color-text-placehoder;
+}
+
+.goods-image {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.goods-info {
+  float: left;
+  width: 80%;
+  margin-left: 10px;
+
+  .name {
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
 
     &:hover {
       cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 
-  .goods-info {
-    float: left;
-    width: 80%;
-    margin-left: 10px;
-
-    .name {
-      height: 36px;
-      line-height: 18px;
-      overflow: hidden;
-
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
-    }
-
-    .specs {
-      margin: 0;
-      font-size: 12px;
-      color: $color-info;
-    }
-
-    .service {
-      font-size: 13px;
-      color: $color-warning;
-    }
-
-    .complete {
-      font-size: 13px;
-      color: $color-success;
-    }
-  }
-
-  .order-log span {
+  .specs {
+    margin: 0;
+    font-size: 12px;
     color: $color-info;
   }
 
-  .order-text {
-    p {
-      margin: 0;
-    }
-
-    .son {
-      color: $color-text-sub;
-      font-size: 13px;
-    }
+  .service {
+    font-size: 13px;
+    color: $color-warning;
   }
 
-  .el-collapse /deep/ .el-collapse-item__header {
-    font-size: 16px;
+  .complete {
+    font-size: 13px;
+    color: $color-success;
   }
+}
+
+.order-log span {
+  color: $color-info;
+}
+
+.order-text {
+  p {
+    margin: 0;
+  }
+
+  .son {
+    color: $color-text-sub;
+    font-size: 13px;
+  }
+}
+
+.el-collapse /deep/ .el-collapse-item__header {
+  font-size: 16px;
+}
 </style>

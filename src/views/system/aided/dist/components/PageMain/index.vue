@@ -343,12 +343,12 @@ export default {
 </script>
 
 <style scoped>
-  .not-trace {
-    color: #99A9BF;
-    text-align: center;
-  }
+.not-trace {
+  color: #99A9BF;
+  text-align: center;
+}
 
-  .input-with-select >>> .el-input-group__prepend {
-    background-color: #FFF;
-  }
+.input-with-select >>> .el-input-group__prepend {
+  background-color: #FFF;
+}
 </style>

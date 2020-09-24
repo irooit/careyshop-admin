@@ -695,16 +695,16 @@ export default {
 </script>
 
 <style scoped>
-  .help-block {
-    color: #909399;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -8px;
-  }
+.help-block {
+  color: #909399;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -8px;
+}
 
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 </style>

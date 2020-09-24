@@ -1031,79 +1031,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
-  }
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
 
-  .el-table /deep/ td {
-    background-color: #FFFFFF !important;
-  }
+.el-table /deep/ td {
+  background-color: #FFFFFF !important;
+}
 
-  .goods-summary {
-    color: $color-text-placehoder;
+.goods-summary {
+  color: $color-text-placehoder;
+  font-size: 13px;
+}
+
+.goods-shop-price {
+  color: $color-danger;
+}
+
+.goods-image {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.goods-info {
+  float: left;
+  width: 70%;
+
+  .son {
+    color: $color-text-sub;
     font-size: 13px;
   }
 
-  .goods-shop-price {
-    color: $color-danger;
-  }
+  p {
+    margin: 0;
 
-  .goods-image {
-    float: left;
-    width: 80px;
-    height: 80px;
-  }
-
-  .goods-info {
-    float: left;
-    width: 70%;
-
-    .son {
-      color: $color-text-sub;
-      font-size: 13px;
-    }
-
-    p {
-      margin: 0;
-
-      .link {
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          text-decoration: underline;
-        }
+    .link {
+      &:hover {
+        cursor: pointer;
+        color: $color-primary;
+        text-decoration: underline;
       }
     }
   }
+}
 
-  .active {
-    display: none;
+.active {
+  display: none;
+}
+
+.action:hover .active {
+  display: inline;
+}
+
+.goods-edit {
+  padding-left: 5px;
+  font-size: 13px;
+  color: $color-info;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary;
+  }
+}
+
+.goods-text {
+  p {
+    margin: 0;
   }
 
-  .action:hover .active {
-    display: inline;
-  }
-
-  .goods-edit {
-    padding-left: 5px;
+  .button {
+    padding: 0;
     font-size: 13px;
-    color: $color-info;
-
-    &:hover {
-      cursor: pointer;
-      color: $color-primary;
-    }
   }
-
-  .goods-text {
-    p {
-      margin: 0;
-    }
-
-    .button {
-      padding: 0;
-      font-size: 13px;
-    }
-  }
+}
 </style>

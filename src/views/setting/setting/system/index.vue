@@ -150,15 +150,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
-  }
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
 
-  .tab-box /deep/ .help-block {
-    color: $color-info;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -12px;
-  }
+.tab-box /deep/ .help-block {
+  color: $color-info;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -12px;
+}
 </style>

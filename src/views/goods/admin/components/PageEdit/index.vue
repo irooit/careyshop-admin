@@ -1894,139 +1894,139 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.brand-name {
+  float: left;
+}
+
+.brand-category {
+  float: right;
+  color: #8492A6;
+  font-size: 12px;
+  padding-right: 15px;
+}
+
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
+
+.input-video {
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.help-block {
+  color: $color-info;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -8px;
+}
+
+.empty-data {
+  @extend %flex-center-row;
+  color: $color-info;
+  height: 156px;
+}
+
+.icon-move {
+  color: $color-text-placehoder;
+  cursor: move;
+}
+
+.attr-form {
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.attr-label {
+  width: 30%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.attr-content {
+  margin-left: 30%;
+  line-height: 34px;
+}
+
+.attr-default {
+  color: $color-text-placehoder;
+  cursor: pointer;
+  float: right;
+  padding: 12px 5px;
+}
+
+.el-collapse /deep/ .el-collapse-item__header {
+  font-size: 14px;
+}
+
+.el-collapse /deep/ .el-collapse-item__content {
+  padding-bottom: 0;
+}
+
+.sortable-ghost {
+  opacity: 0;
+}
+
+.active {
+  display: none;
+}
+
+.action:hover .active {
+  display: inline;
+}
+
+.spec-action {
+  color: $color-primary;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.spec-item {
+  float: left;
+  padding: 0 0 15px 24px;
+}
+
+.spec-type {
+  display: inline;
+  padding-right: 31px;
+}
+
+.spec-position {
+  position: absolute;
+  overflow: hidden;
+}
+
+.spec-more {
+  .type-select {
+    width: 75px;
   }
 
-  .clearfix:after {
-    clear: both;
+  .el-input-group {
+    vertical-align: middle;
   }
 
-  .brand-name {
-    float: left;
+  /deep/ .el-input-group__prepend {
+    background-color: #FFFFFF;
   }
+}
 
-  .brand-category {
-    float: right;
-    color: #8492A6;
-    font-size: 12px;
-    padding-right: 15px;
-  }
+.spec-check {
+  width: 16px;
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
-
-  .input-video {
-    width: 350px;
-    margin-bottom: 10px;
-  }
-
-  .help-block {
-    color: $color-info;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -8px;
-  }
-
-  .empty-data {
-    @extend %flex-center-row;
-    color: $color-info;
-    height: 156px;
-  }
-
-  .icon-move {
-    color: $color-text-placehoder;
-    cursor: move;
-  }
-
-  .attr-form {
-    padding-left: 15px;
-    margin-bottom: 10px;
-  }
-
-  .attr-label {
-    width: 30%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .attr-content {
-    margin-left: 30%;
-    line-height: 34px;
-  }
-
-  .attr-default {
-    color: $color-text-placehoder;
-    cursor: pointer;
-    float: right;
-    padding: 12px 5px;
-  }
-
-  .el-collapse /deep/ .el-collapse-item__header {
-    font-size: 14px;
-  }
-
-  .el-collapse /deep/ .el-collapse-item__content {
-    padding-bottom: 0;
-  }
-
-  .sortable-ghost {
-    opacity: 0;
-  }
-
-  .active {
+  /deep/ .el-checkbox__label {
     display: none;
   }
-
-  .action:hover .active {
-    display: inline;
-  }
-
-  .spec-action {
-    color: $color-primary;
-    padding-right: 10px;
-    font-size: 12px;
-  }
-
-  .spec-item {
-    float: left;
-    padding: 0 0 15px 24px;
-  }
-
-  .spec-type {
-    display: inline;
-    padding-right: 31px;
-  }
-
-  .spec-position {
-    position: absolute;
-    overflow: hidden;
-  }
-
-  .spec-more {
-    .type-select {
-      width: 75px;
-    }
-
-    .el-input-group {
-      vertical-align: middle;
-    }
-
-    /deep/ .el-input-group__prepend {
-      background-color: #FFFFFF;
-    }
-  }
-
-  .spec-check {
-    width: 16px;
-
-    /deep/ .el-checkbox__label {
-      display: none;
-    }
-  }
+}
 </style>

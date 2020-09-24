@@ -26,17 +26,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .index-btn-group {
-    color: $color-text-placehoder;
+.index-btn-group {
+  color: $color-text-placehoder;
 
-    span {
-      font-size: 13px;
-      color: $color-text-sub;
+  span {
+    font-size: 13px;
+    color: $color-text-sub;
 
-      &:hover {
-        color: $color-text-main;
-        cursor: pointer;
-      }
+    &:hover {
+      color: $color-text-main;
+      cursor: pointer;
     }
   }
+}
 </style>

@@ -113,65 +113,65 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
+
+.box-card-header {
+  font-size: 14px;
+  color: $color-text-normal;
+}
+
+.table-card {
+  border: 1px solid $color-border-1;
+  border-bottom: none;
+}
+
+.link {
+  &:hover {
+    cursor: pointer;
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.cs-today {
+  .cs-today__block {
+    width: 16.6%;
+    box-sizing: border-box;
   }
 
-  .box-card-header {
-    font-size: 14px;
-    color: $color-text-normal;
-  }
-
-  .table-card {
-    border: 1px solid $color-border-1;
-    border-bottom: none;
-  }
-
-  .link {
-    &:hover {
-      cursor: pointer;
-      color: $color-primary;
-      text-decoration: underline;
-    }
-  }
-
-  .flex-wrap {
+  .cs-today__content {
     display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
+    color: $color-info;
+    border-radius: 4px;
+    background-color: #F5F7FA;
+    margin: 10px;
+    overflow: hidden;
   }
 
-  .cs-today {
-    .cs-today__block {
-      width: 16.6%;
-      box-sizing: border-box;
-    }
+  .cs-today__info {
+    width: 100%;
+    text-align: center;
 
-    .cs-today__content {
-      display: flex;
-      color: $color-info;
-      border-radius: 4px;
-      background-color: #F5F7FA;
+    p {
       margin: 10px;
+      font-size: 14px;
       overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .cs-today__info {
-      width: 100%;
-      text-align: center;
-
-      p {
-        margin: 10px;
-        font-size: 14px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .cs-today__number {
-        color: $color-text-normal;
-        font-size: 28px;
-      }
+    .cs-today__number {
+      color: $color-text-normal;
+      font-size: 28px;
     }
   }
+}
 </style>

@@ -150,7 +150,7 @@ export default {
 </script>
 
 <style scoped>
-  .upload-control {
-    width: auto;
-  }
+.upload-control {
+  width: auto;
+}
 </style>

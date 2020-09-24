@@ -456,32 +456,32 @@ export default {
 </script>
 
 <style scoped>
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
 
-  .clearfix:after {
-    clear: both;
-  }
+.clearfix:after {
+  clear: both;
+}
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid #DCDFE6;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid #DCDFE6;
+}
 
-  .popover-image {
-    text-align: center;
-    line-height: 0;
-  }
+.popover-image {
+  text-align: center;
+  line-height: 0;
+}
 
-  .popover-image >>> img {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.popover-image >>> img {
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-  .el-image >>> .el-image__error {
-    line-height: 1.4;
-  }
+.el-image >>> .el-image__error {
+  line-height: 1.4;
+}
 </style>
