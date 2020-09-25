@@ -29,7 +29,7 @@ export default {
     return {
       loading: false,
       chartData: {
-        columns: ['day', 'sales', 'views'],
+        columns: ['day', 'views', 'sales', 'conversion'],
         rows: []
       },
       todayData: {},

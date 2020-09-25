@@ -98,9 +98,16 @@ export default {
       },
       chartSettings: {
         labelMap: {
+          views: '游览量',
           sales: '销售量',
-          views: '游览量'
-        }
+          conversion: '转化率'
+        },
+        axisSite: {
+          right: ['conversion']
+        },
+        yAxisType: ['KMB', 'percent'],
+        yAxisName: ['数值', '比率'],
+        showLine: ['conversion']
       }
     }
   },
