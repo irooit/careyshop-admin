@@ -61,6 +61,7 @@ export default {
       contentmenuX: 0,
       contentmenuY: 0,
       contextmenuListIndex: [
+        { icon: 'el-icon-refresh', title: '刷新页面', value: 'refresh' },
         { icon: 'el-icon-circle-close', title: '关闭全部', value: 'all' }
       ],
       contextmenuList: [
