@@ -2,7 +2,7 @@
   <div class="cs-p">
     <div class="cs-card">
       <i class="el-icon-collection-tag cs-pb">今日概况
-        <span class="update-time">更新时间：{{updateTime}}</span>
+        <span class="update-time">统计日期：{{updateTime}}</span>
       </i>
 
       <el-link
