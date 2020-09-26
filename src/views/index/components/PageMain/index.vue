@@ -36,9 +36,17 @@
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">今日活跃会员</i>
         </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">商品排行榜</i>
+        </div>
       </el-col>
 
       <el-col :span="10">
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">常用入口</i>
+        </div>
+
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">销售统计</i>
         </div>
@@ -49,10 +57,6 @@
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">会员等级</i>
-        </div>
-
-        <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">单品排行</i>
         </div>
       </el-col>
     </el-row>

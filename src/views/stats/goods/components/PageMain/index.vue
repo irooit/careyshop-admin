@@ -28,7 +28,7 @@
             <span>趋势</span>
           </div>
 
-          <ve-line :data="chartData" :settings="chartSettings"/>
+          <ve-line :data="chartData" :colors="colors" :settings="chartSettings"/>
         </el-card>
       </el-col>
 
@@ -66,12 +66,12 @@
 </template>
 
 <script>
-import charts from '@/plugin/careyshop/charts'
+import colors from '@/plugin/careyshop/charts'
 
 export default {
-  mixins: [
-    charts
-  ],
+  components: {
+    VeLine: () => import('v-charts/lib/line.common')
+  },
   props: {
     todayData: {
       default: () => {}
@@ -88,6 +88,7 @@ export default {
   },
   data() {
     return {
+      colors,
       todayMap: {
         new: '新增数',
         online: '上架中',

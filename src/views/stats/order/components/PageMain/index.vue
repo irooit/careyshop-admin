@@ -28,7 +28,7 @@
             <span>趋势</span>
           </div>
 
-          <ve-histogram :data="orderData" :settings="chartSettings"/>
+          <ve-histogram :data="orderData" :colors="colors" :settings="chartSettings"/>
         </el-card>
       </el-col>
 
@@ -38,7 +38,7 @@
             <span>订单来源</span>
           </div>
 
-          <ve-pie :data="sourceData"/>
+          <ve-pie :data="sourceData" :colors="colors"/>
         </el-card>
       </el-col>
     </el-row>
@@ -46,12 +46,13 @@
 </template>
 
 <script>
-import charts from '@/plugin/careyshop/charts'
+import colors from '@/plugin/careyshop/charts'
 
 export default {
-  mixins: [
-    charts
-  ],
+  components: {
+    VeHistogram: () => import('v-charts/lib/histogram.common'),
+    VePie: () => import('v-charts/lib/pie.common')
+  },
   props: {
     todayData: {
       default: () => {}
@@ -68,6 +69,7 @@ export default {
   },
   data() {
     return {
+      colors,
       todayMap: {
         order: '订单量',
         sales: '销售额',

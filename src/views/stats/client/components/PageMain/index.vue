@@ -28,7 +28,7 @@
             <span>趋势</span>
           </div>
 
-          <ve-line :data="loginData" :settings="chartSettings"/>
+          <ve-line :data="loginData" :colors="colors" :settings="chartSettings"/>
         </el-card>
       </el-col>
 
@@ -38,7 +38,7 @@
             <span>会员等级</span>
           </div>
 
-          <ve-pie :data="levelData"/>
+          <ve-pie :data="levelData" :colors="colors"/>
         </el-card>
       </el-col>
     </el-row>
@@ -46,12 +46,13 @@
 </template>
 
 <script>
-import charts from '@/plugin/careyshop/charts'
+import colors from '@/plugin/careyshop/charts'
 
 export default {
-  mixins: [
-    charts
-  ],
+  components: {
+    VeLine: () => import('v-charts/lib/line.common'),
+    VePie: () => import('v-charts/lib/pie.common')
+  },
   props: {
     todayData: {
       default: () => {}
@@ -68,6 +69,7 @@ export default {
   },
   data() {
     return {
+      colors,
       todayMap: {
         count: '客户合计',
         enable: '正常会员',
