@@ -231,6 +231,7 @@ export default {
 
 .cs-today {
   display: inline-flex;
+  height: 52px;
 
   .cs-today__icon {
     @extend %flex-center-row;
