@@ -1,7 +1,8 @@
 <template>
   <div class="cs-p">
     <div class="cs-card">
-      <i class="el-icon-collection-tag cs-pb">今日概况
+      <i class="el-icon-data-line cs-pb">
+        <span class="cs-p-5">今日概况</span>
         <span class="update-time">统计日期：{{updateTime}}</span>
       </i>
 
@@ -33,11 +34,15 @@
     <el-row :gutter="20">
       <el-col :span="14">
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">订单状态</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">订单状态</span>
+          </i>
         </div>
 
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">今日订单量</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">今日订单量</span>
+          </i>
           <ve-line
             :data="orderToday"
             :colors="colors"
@@ -45,7 +50,9 @@
         </div>
 
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">今日活跃会员</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">今日活跃会员</span>
+          </i>
           <ve-line
             :data="clientActive"
             :colors="colors"
@@ -83,20 +90,28 @@
 
       <el-col :span="10">
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">常用入口</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">快捷入口</span>
+          </i>
         </div>
 
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">销售统计</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">销售统计</span>
+          </i>
         </div>
 
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">订单来源</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">订单来源</span>
+          </i>
           <ve-pie :data="orderSource" :colors="colors"/>
         </div>
 
         <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">会员等级</i>
+          <i class="el-icon-collection-tag cs-pb">
+            <span class="cs-pl-5">会员等级</span>
+          </i>
           <ve-ring :data="clientLevel" :colors="colors"/>
         </div>
       </el-col>
