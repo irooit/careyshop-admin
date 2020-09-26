@@ -10,7 +10,7 @@
         style="font-size: 13px;"
         icon="el-icon-refresh"
         :underline="false"
-        @click="handleSubmit">刷新</el-link>
+        @click="handleRefresh">刷新</el-link>
 
       <el-row>
         <el-col
@@ -175,6 +175,9 @@ export default {
         name: 'goods-admin-view',
         params: { goods_id }
       })
+    },
+    handleRefresh() {
+      this.$router.push({ name: 'refresh' })
     }
   }
 }
