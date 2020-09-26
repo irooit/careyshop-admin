@@ -424,12 +424,10 @@ export default {
     margin: 0;
     line-height: 1.3;
 
-    .link {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 }
@@ -466,11 +464,9 @@ export default {
   color: $color-text-placehoder;
 }
 
-.link {
-  &:hover {
-    cursor: pointer;
-    color: $color-primary;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: $color-primary;
+  text-decoration: underline;
 }
 </style>

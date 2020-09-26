@@ -407,12 +407,10 @@ export default {
   .goods-info {
     padding: 0 50px 0 100px;
 
-    .link {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
 
     .delivery {

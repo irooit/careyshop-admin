@@ -642,12 +642,10 @@ export default {
       text-align: right;
     }
 
-    .link {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 }

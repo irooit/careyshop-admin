@@ -150,12 +150,10 @@ export default {
   }
 }
 
-.link {
-  &:hover {
-    cursor: pointer;
-    color: $color-primary;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: $color-primary;
+  text-decoration: underline;
 }
 
 .flex-wrap {

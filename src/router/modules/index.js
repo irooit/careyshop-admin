@@ -11,7 +11,7 @@ export default {
     {
       path: 'index',
       name: 'index',
-      meta: { title: '首页', auth: true },
+      meta: { title: '首页', cache: true, auth: true },
       component: () => import('@/views/index/index')
     },
     {

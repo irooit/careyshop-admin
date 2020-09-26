@@ -5,6 +5,13 @@
         <span class="update-time">更新时间：{{updateTime}}</span>
       </i>
 
+      <el-link
+        class="cs-fr"
+        style="font-size: 13px;"
+        icon="el-icon-refresh"
+        :underline="false"
+        @click="handleSubmit">刷新</el-link>
+
       <el-row>
         <el-col
           v-for="(item, key) in todayData"
@@ -31,15 +38,47 @@
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">今日订单量</i>
+          <ve-line
+            :data="orderToday"
+            :colors="colors"
+            :settings="{labelMap: {count: '订单量合计'}}"/>
         </div>
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">今日活跃会员</i>
+          <ve-line
+            :data="clientActive"
+            :colors="colors"
+            :settings="{labelMap: {count: '活跃数合计'}}"/>
         </div>
 
-        <div class="cs-card">
-          <i class="el-icon-collection-tag cs-pb">商品排行榜</i>
-        </div>
+        <el-table
+          :data="goodsTop"
+          :header-cell-style="{padding: '8px 0'}"
+          class="table-card">
+          <el-table-column
+            type="index"
+            label="排行"
+            width="56">
+          </el-table-column>
+
+          <el-table-column
+            label="名称"
+            show-overflow-tooltip>
+            <template slot-scope="scope">
+              <span
+                @click="handleView(scope.row.goods_id)"
+                class="link">{{scope.row.name}}</span>
+            </template>
+          </el-table-column>
+
+          <el-table-column
+            prop="sales_sum"
+            label="销售量"
+            align="center"
+            width="100">
+          </el-table-column>
+        </el-table>
       </el-col>
 
       <el-col :span="10">
@@ -53,10 +92,12 @@
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">订单来源</i>
+          <ve-pie :data="orderSource" :colors="colors"/>
         </div>
 
         <div class="cs-card">
           <i class="el-icon-collection-tag cs-pb">会员等级</i>
+          <ve-ring :data="clientLevel" :colors="colors"/>
         </div>
       </el-col>
     </el-row>
@@ -65,10 +106,17 @@
 
 <script>
 import { getStatsData } from '@/api/aided/stats'
+import colors from '@/plugin/careyshop/charts'
 
 export default {
+  components: {
+    VeLine: () => import('v-charts/lib/line.common'),
+    VePie: () => import('v-charts/lib/pie.common'),
+    VeRing: () => import('v-charts/lib/ring.common')
+  },
   data() {
     return {
+      colors,
       updateTime: '',
       todayData: {},
       todayMap: {
@@ -80,7 +128,24 @@ export default {
         withdraw: { icon: 'jiekuan_o', name: '提现单', url: 'member-withdraw-list' },
         comment: { icon: 'RectangleCopy240', name: '评价待回复', url: 'goods-opinion-comment' },
         consult: { icon: 'wangwang_o', name: '咨询待回复', url: 'goods-opinion-consult' }
-      }
+      },
+      orderToday: {
+        columns: ['hour', 'count'],
+        rows: []
+      },
+      clientActive: {
+        columns: ['hour', 'count'],
+        rows: []
+      },
+      orderSource: {
+        columns: ['name', 'count'],
+        rows: []
+      },
+      clientLevel: {
+        columns: ['name', 'count'],
+        rows: []
+      },
+      goodsTop: []
     }
   },
   mounted() {
@@ -94,11 +159,22 @@ export default {
           if (data) {
             this.updateTime = data.update_time
             this.todayData = data.today_data
+            this.orderToday.rows = data.order_today
+            this.clientActive.rows = data.client_active
+            this.orderSource.rows = data.order_source
+            this.clientLevel.rows = data.client_level
+            this.goodsTop = data.goods_top
           }
         })
     },
     handleOpen(name) {
       this.$router.push({ name })
+    },
+    handleView(goods_id) {
+      this.$router.push({
+        name: 'goods-admin-view',
+        params: { goods_id }
+      })
     }
   }
 }
@@ -108,6 +184,21 @@ export default {
 .update-time {
   font-size: 12px;
   color: $color-info;
+}
+
+.table-card {
+  border: 1px solid $color-border-1;
+  border-bottom: none;
+
+  /deep/ td {
+    padding: 10px;
+  }
+}
+
+.link:hover {
+  cursor: pointer;
+  color: $color-primary;
+  text-decoration: underline;
 }
 
 .cs-card {

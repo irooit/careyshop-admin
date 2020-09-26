@@ -1067,12 +1067,10 @@ export default {
   p {
     margin: 0;
 
-    .link {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 }

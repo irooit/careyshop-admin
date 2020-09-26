@@ -334,12 +334,10 @@ export default {
   float: left;
   width: 80%;
 
-  .link {
-    &:hover {
-      cursor: pointer;
-      color: $color-primary;
-      text-decoration: underline;
-    }
+  .link:hover {
+    cursor: pointer;
+    color: $color-primary;
+    text-decoration: underline;
   }
 }
 
