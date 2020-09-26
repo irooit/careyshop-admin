@@ -1,8 +1,7 @@
 <template>
   <div class="cs-p">
     <div class="cs-card">
-      <i class="el-icon-collection-tag cs-pb">
-        今日概况
+      <i class="el-icon-collection-tag cs-pb">今日概况
         <span class="update-time">更新时间：{{updateTime}}</span>
       </i>
 
@@ -16,7 +15,7 @@
             <cs-icon :name="todayMap[key].icon"/>
           </div>
 
-          <div class="cs-today__info" @click="handleMenuSelect(todayMap[key].url)">
+          <div class="cs-today__info" @click="handleOpen(todayMap[key].url)">
             <cs-count-up class="cs-today__number" :end="item"/>
             <div class="cs-today__desc">{{todayMap[key].name}}</div>
           </div>
@@ -24,12 +23,44 @@
       </el-row>
     </div>
 
+    <el-row :gutter="20">
+      <el-col :span="14">
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">订单状态</i>
+        </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">今日订单量</i>
+        </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">今日活跃会员</i>
+        </div>
+      </el-col>
+
+      <el-col :span="10">
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">销售统计</i>
+        </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">订单来源</i>
+        </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">会员等级</i>
+        </div>
+
+        <div class="cs-card">
+          <i class="el-icon-collection-tag cs-pb">单品排行</i>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import { getStatsData } from '@/api/aided/stats'
-import menuMixin from '@/layout/header-aside/components/mixin/menu'
 
 export default {
   data() {
@@ -37,20 +68,17 @@ export default {
       updateTime: '',
       todayData: {},
       todayMap: {
-        order: { icon: 'RectangleCopy153', name: '订单数', url: '/order/admin/list' },
-        trade: { icon: 'baoguo_dabao_o', name: '完成数', url: '/order/admin/list' },
-        collect: { icon: 'shoucang_o', name: '收藏量', url: '/goods/admin/list' },
-        client: { icon: 'RectangleCopy214', name: '新增会员', url: '/member/user/client' },
-        service: { icon: 'fuwu_o', name: '售后单', url: '/order/service/list' },
-        withdraw: { icon: 'jiekuan_o', name: '提现单', url: '/member/withdraw/list' },
-        comment: { icon: 'RectangleCopy240', name: '评价待回复', url: '/goods/opinion/comment' },
-        consult: { icon: 'wangwang_o', name: '咨询待回复', url: '/goods/opinion/consult' }
+        order: { icon: 'RectangleCopy153', name: '订单数', url: 'order-admin-list' },
+        trade: { icon: 'baoguo_dabao_o', name: '完成数', url: 'order-admin-list' },
+        collect: { icon: 'shoucang_o', name: '收藏量', url: 'goods-admin-list' },
+        client: { icon: 'RectangleCopy214', name: '新增会员', url: 'member-user-client' },
+        service: { icon: 'fuwu_o', name: '售后单', url: 'order-service-list' },
+        withdraw: { icon: 'jiekuan_o', name: '提现单', url: 'member-withdraw-list' },
+        comment: { icon: 'RectangleCopy240', name: '评价待回复', url: 'goods-opinion-comment' },
+        consult: { icon: 'wangwang_o', name: '咨询待回复', url: 'goods-opinion-consult' }
       }
     }
   },
-  mixins: [
-    menuMixin
-  ],
   mounted() {
     this.handleSubmit()
   },
@@ -64,6 +92,9 @@ export default {
             this.todayData = data.today_data
           }
         })
+    },
+    handleOpen(name) {
+      this.$router.push({ name })
     }
   }
 }
@@ -81,6 +112,7 @@ export default {
   background: #FFF;
   font-size: 14px;
   position: relative;
+  margin-bottom: 20px;
   padding: 20px;
 }
 
