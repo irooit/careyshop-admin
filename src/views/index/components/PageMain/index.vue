@@ -6,9 +6,9 @@
         <span class="cs-card-sub">统计日期：{{updateTime}}</span>
       </i>
 
-      <i
-        class="el-icon-refresh cs-card-sub cs-fr link"
-        @click="handleRefresh">刷新</i>
+      <i class="el-icon-refresh cs-card-sub cs-fr link">
+        <span class="cs-pl-5" @click="handleRefresh">刷新</span>
+      </i>
 
       <div flex="cross:center main:center">
         <div
@@ -243,8 +243,8 @@ export default {
       linkData: [
         { name: '官方主页', url: 'careyshop.cn' },
         { name: '文档中心', url: 'doc.careyshop.cn' },
-        { name: 'Github Star', url: 'github.com/dnyz520/careyshop' },
-        { name: 'Gitee Star', url: 'gitee.com/careyshop/careyshop' }
+        { name: 'Github', url: 'github.com/dnyz520/careyshop' },
+        { name: 'Gitee', url: 'gitee.com/careyshop/careyshop' }
       ]
     }
   },
@@ -364,7 +364,7 @@ export default {
   width: 100%;
 
   tr td {
-    padding: 15px 0;
+    padding: 14px 0;
     border: solid $color-border-1 1px;
   }
 
@@ -385,7 +385,9 @@ export default {
 }
 
 .careyshop {
+  font-size: 13px;
   color: $color-primary;
+  line-height: 19px;
   margin-bottom: -10px;
 }
 </style>
