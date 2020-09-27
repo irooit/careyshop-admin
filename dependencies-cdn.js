@@ -14,7 +14,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'vue-router',
       library: 'VueRouter',
-      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.3/dist/vue-router.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.5/dist/vue-router.min.js',
       css: ''
     },
     {
