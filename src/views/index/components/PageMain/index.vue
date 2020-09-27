@@ -10,12 +10,12 @@
         class="el-icon-refresh cs-card-sub cs-fr link"
         @click="handleRefresh">刷新</i>
 
-      <el-row>
-        <el-col
+      <div flex="cross:center main:center">
+        <div
           v-for="(item, key) in todayData"
-          class="cs-today"
           :key="key"
-          :span="3">
+          class="cs-today"
+          flex-box="1">
           <div class="cs-today__icon cs-fcr cs-pr-10">
             <cs-icon :name="todayMap[key].icon"/>
           </div>
@@ -24,8 +24,8 @@
             <cs-count-up class="cs-today__number" :end="item"/>
             <span class="cs-today__desc">{{todayMap[key].name}}</span>
           </div>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
     </div>
 
     <el-row :gutter="20">
@@ -69,7 +69,6 @@
         </div>
 
         <el-table
-          v-show="false"
           :data="goodsTop"
           :header-cell-style="{padding: '8px 0'}"
           class="table-card">
@@ -104,12 +103,18 @@
             <span class="cs-pl-5">快捷入口</span>
           </i>
 
-          <div style="overflow: hidden;" flex>
-            <el-button size="mini" plain @click="$open('careyshop.cn')">官方主页</el-button>
-            <el-button size="mini" plain @click="$open('careyshop.cn/download.html')">版本发布</el-button>
-            <el-button size="mini" plain @click="$open('doc.careyshop.cn')">文档中心</el-button>
-            <el-button size="mini" plain @click="$open('github.com/dnyz520/careyshop')">Github Star</el-button>
-            <el-button size="mini" plain @click="$open('gitee.com/careyshop/careyshop')">Gitee Star</el-button>
+          <div flex="cross:center main:center" style="overflow: hidden;">
+            <el-button
+              v-for="(item, key) in linkData"
+              :key="key"
+              flex-box="1"
+              size="mini"
+              :plain="true"
+              @click="$open(item.url)">{{item.name}}</el-button>
+          </div>
+
+          <div class="careyshop cs-tc cs-pt-10">
+            <span>温州瑞令网络科技有限公司 版权所有</span>
           </div>
         </div>
 
@@ -234,7 +239,13 @@ export default {
         shipped: '已发货',
         not_comment: '未评价'
       },
-      orderStatus: {}
+      orderStatus: {},
+      linkData: [
+        { name: '官方主页', url: 'careyshop.cn' },
+        { name: '文档中心', url: 'doc.careyshop.cn' },
+        { name: 'Github Star', url: 'github.com/dnyz520/careyshop' },
+        { name: 'Gitee Star', url: 'gitee.com/careyshop/careyshop' }
+      ]
     }
   },
   mounted() {
@@ -252,7 +263,7 @@ export default {
             this.clientActive.rows = data.client_active
             this.orderSource.rows = data.order_source
             this.clientLevel.rows = data.client_level
-            this.goodsTop = data.goods_top
+            this.goodsTop = data.goods_top.slice(0, 6)
             this.salesStatus = data.sales_status
             this.orderStatus = data.order_status
           }
@@ -319,7 +330,7 @@ export default {
   }
 
   .cs-today__info {
-    line-height: 25px;
+    line-height: 24px;
 
     .cs-today__number {
       display: block;
@@ -353,7 +364,7 @@ export default {
   width: 100%;
 
   tr td {
-    padding: 10px 0;
+    padding: 15px 0;
     border: solid $color-border-1 1px;
   }
 
@@ -371,5 +382,10 @@ export default {
     color: $color-text-main;
     font-size: 18px;
   }
+}
+
+.careyshop {
+  color: $color-primary;
+  margin-bottom: -10px;
 }
 </style>
