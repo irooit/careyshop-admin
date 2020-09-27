@@ -3,15 +3,12 @@
     <div class="cs-card">
       <i class="el-icon-data-line cs-pb">
         <span class="cs-p-5">今日概况</span>
-        <span class="update-time">统计日期：{{updateTime}}</span>
+        <span class="cs-card-sub">统计日期：{{updateTime}}</span>
       </i>
 
-      <el-link
-        class="cs-fr"
-        style="font-size: 13px;"
-        icon="el-icon-refresh"
-        :underline="false"
-        @click="handleRefresh">刷新</el-link>
+      <i
+        class="el-icon-refresh cs-card-sub cs-fr link"
+        @click="handleRefresh">刷新</i>
 
       <el-row>
         <el-col
@@ -19,13 +16,13 @@
           class="cs-today"
           :key="key"
           :span="3">
-          <div class="cs-today__icon cs-pr-10">
+          <div class="cs-today__icon cs-fcr cs-pr-10">
             <cs-icon :name="todayMap[key].icon"/>
           </div>
 
           <div class="cs-today__info" @click="handleOpen(todayMap[key].url)">
             <cs-count-up class="cs-today__number" :end="item"/>
-            <div class="cs-today__desc">{{todayMap[key].name}}</div>
+            <span class="cs-today__desc">{{todayMap[key].name}}</span>
           </div>
         </el-col>
       </el-row>
@@ -93,6 +90,14 @@
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">快捷入口</span>
           </i>
+
+          <div>
+            <el-button size="mini" plain @click="$open('careyshop.cn')">官方主页</el-button>
+            <el-button size="mini" plain @click="$open('careyshop.cn/download.html')">版本发布</el-button>
+            <el-button size="mini" plain @click="$open('doc.careyshop.cn')">文档中心</el-button>
+            <el-button size="mini" plain @click="$open('github.com/dnyz520')">Github</el-button>
+            <el-button size="mini" plain @click="$open('gitee.com/careyshop')">Gitee</el-button>
+          </div>
         </div>
 
         <div class="cs-card">
@@ -199,11 +204,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.update-time {
-  font-size: 12px;
-  color: $color-info;
-}
-
 .table-card {
   border: 1px solid $color-border-1;
   border-bottom: none;
@@ -229,31 +229,35 @@ export default {
   padding: 20px;
 }
 
+.cs-card-sub {
+  font-size: 12px;
+  color: $color-info;
+}
+
 .cs-today {
   display: inline-flex;
-  height: 52px;
 
-  .cs-today__icon {
-    @extend %flex-center-row;
+  .cs-today__icon i {
+    font-size: 40px;
+    color: $color-info;
+  }
 
-    i {
-      font-size: 40px;
+  .cs-today__info {
+    line-height: 25px;
+
+    .cs-today__number {
+      display: block;
+      font-size: 24px;
+    }
+
+    .cs-today__desc {
       color: $color-info;
     }
-  }
 
-  .cs-today__info:hover{
-    cursor: pointer;
-    color: $color-primary;
-  }
-
-  .cs-today__number {
-    display: block;
-    font-size: 24px;
-  }
-
-  .cs-today__desc {
-    color: $color-info;
+    &:hover {
+      cursor: pointer;
+      color: $color-primary;
+    }
   }
 }
 </style>
