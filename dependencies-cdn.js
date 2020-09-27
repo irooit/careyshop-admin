@@ -42,12 +42,6 @@ if (process.env.VUE_APP_CDN === 'true') {
       css: 'https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css'
     },
     {
-      name: 'countup.js',
-      library: 'CountUp',
-      js: 'https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js',
-      css: ''
-    },
-    {
       name: 'dayjs',
       library: 'dayjs',
       js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.36/dayjs.min.js',
@@ -92,7 +86,13 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'sortablejs',
       library: 'Sortable',
-      js: 'https://cdn.jsdelivr.net/npm/sortablejs@1.11.2/Sortable.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js',
+      css: ''
+    },
+    {
+      name: 'vuedraggable',
+      library: 'vuedraggable',
+      js: 'https://cdn.jsdelivr.net/npm/vuedraggable@2.24.1/dist/vuedraggable.umd.min.js',
       css: ''
     },
     {
