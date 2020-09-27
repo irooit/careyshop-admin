@@ -20,7 +20,7 @@
             <cs-icon :name="todayMap[key].icon"/>
           </div>
 
-          <div class="cs-today__info" @click="handleOpen(todayMap[key].url)">
+          <div class="cs-today__info link" @click="handleOpen(todayMap[key].url)">
             <cs-count-up class="cs-today__number" :end="item"/>
             <span class="cs-today__desc">{{todayMap[key].name}}</span>
           </div>
@@ -57,6 +57,7 @@
         </div>
 
         <el-table
+          v-show="false"
           :data="goodsTop"
           :header-cell-style="{padding: '8px 0'}"
           class="table-card">
@@ -72,7 +73,7 @@
             <template slot-scope="scope">
               <span
                 @click="handleView(scope.row.goods_id)"
-                class="link">{{scope.row.name}}</span>
+                class="goods-link">{{scope.row.name}}</span>
             </template>
           </el-table-column>
 
@@ -91,12 +92,12 @@
             <span class="cs-pl-5">快捷入口</span>
           </i>
 
-          <div>
+          <div style="overflow: hidden;" flex>
             <el-button size="mini" plain @click="$open('careyshop.cn')">官方主页</el-button>
             <el-button size="mini" plain @click="$open('careyshop.cn/download.html')">版本发布</el-button>
             <el-button size="mini" plain @click="$open('doc.careyshop.cn')">文档中心</el-button>
-            <el-button size="mini" plain @click="$open('github.com/dnyz520')">Github</el-button>
-            <el-button size="mini" plain @click="$open('gitee.com/careyshop')">Gitee</el-button>
+            <el-button size="mini" plain @click="$open('github.com/dnyz520/careyshop')">Github Star</el-button>
+            <el-button size="mini" plain @click="$open('gitee.com/careyshop/careyshop')">Gitee Star</el-button>
           </div>
         </div>
 
@@ -104,6 +105,50 @@
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">销售统计</span>
           </i>
+
+          <table class="cs-sales">
+            <tbody>
+            <tr><td rowspan="3" class="cs-sales__title">昨日销量</td></tr>
+            <tr>
+              <td>
+                <span>订单量</span>
+                <cs-count-up
+                  class="cs-sales__number"
+                  :end="salesStatus.yesterday.count"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>销售额</span>
+                <cs-count-up
+                  class="cs-sales__number"
+                  :end="salesStatus.yesterday.sales"
+                  :decimals="2"/>
+              </td>
+            </tr>
+
+            <tr style="height: 20px;"></tr>
+
+            <tr><td rowspan="3" class="cs-sales__title">本月销量</td></tr>
+            <tr>
+              <td>
+                <span>订单量</span>
+                <cs-count-up
+                  class="cs-sales__number"
+                  :end="salesStatus.month.count"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>销售额</span>
+                <cs-count-up
+                  class="cs-sales__number"
+                  :end="salesStatus.month.sales"
+                  :decimals="2"/>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="cs-card">
@@ -165,7 +210,11 @@ export default {
         columns: ['name', 'count'],
         rows: []
       },
-      goodsTop: []
+      goodsTop: [],
+      salesStatus: {
+        yesterday: {},
+        month: {}
+      }
     }
   },
   mounted() {
@@ -184,6 +233,7 @@ export default {
             this.orderSource.rows = data.order_source
             this.clientLevel.rows = data.client_level
             this.goodsTop = data.goods_top
+            this.salesStatus = data.sales_status
           }
         })
     },
@@ -214,6 +264,11 @@ export default {
 }
 
 .link:hover {
+  cursor: pointer;
+  color: $color-primary !important;
+}
+
+.goods-link:hover {
   cursor: pointer;
   color: $color-primary;
   text-decoration: underline;
@@ -253,11 +308,33 @@ export default {
     .cs-today__desc {
       color: $color-info;
     }
+  }
+}
 
-    &:hover {
-      cursor: pointer;
-      color: $color-primary;
-    }
+.cs-sales {
+  color: $color-info;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+
+  tr td {
+    padding: 10px 0;
+    border: solid $color-border-1 1px;
+  }
+
+  span {
+    padding-left: 10px;
+  }
+
+  .cs-sales__title {
+    text-align: center;
+    background: #F5F7FA;
+    width: 30%;
+  }
+
+  .cs-sales__number {
+    color: $color-text-main;
+    font-size: 18px;
   }
 }
 </style>
