@@ -34,6 +34,18 @@
           <i class="el-icon-collection-tag cs-pb">
             <span class="cs-pl-5">订单状态</span>
           </i>
+
+          <div flex="cross:center main:center">
+            <div
+              v-for="(item, key) in orderStatus"
+              :key="key"
+              flex-box="1">
+              <div class="cs-order cs-tc link" @click="handleOpen('order-admin-list')">
+                <cs-count-up class="cs-order__number" :end="item"/>
+                <span class="cs-order__desc">{{orderMap[key]}}</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="cs-card">
@@ -214,7 +226,15 @@ export default {
       salesStatus: {
         yesterday: {},
         month: {}
-      }
+      },
+      orderMap: {
+        not_paid: '待付款',
+        paid: '已付款',
+        not_shipped: '待发货',
+        shipped: '已发货',
+        not_comment: '未评价'
+      },
+      orderStatus: {}
     }
   },
   mounted() {
@@ -234,6 +254,7 @@ export default {
             this.clientLevel.rows = data.client_level
             this.goodsTop = data.goods_top
             this.salesStatus = data.sales_status
+            this.orderStatus = data.order_status
           }
         })
     },
@@ -308,6 +329,20 @@ export default {
     .cs-today__desc {
       color: $color-info;
     }
+  }
+}
+
+.cs-order {
+  span {
+    display: block;
+  }
+
+  .cs-order__number {
+    font-size: 24px;
+  }
+
+  .cs-order__desc {
+    color: $color-info;
   }
 }
 
