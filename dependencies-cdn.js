@@ -44,7 +44,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'dayjs',
       library: 'dayjs',
-      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.36/dayjs.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.9.0/dayjs.min.js',
       css: ''
     },
     {
