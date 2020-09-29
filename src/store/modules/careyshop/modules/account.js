@@ -18,7 +18,7 @@ export default {
       let cookieSetting = remember ? { expires: 365 } : { expires: null }
       util.cookies.set('uuid', res.data.admin.username, cookieSetting)
       util.cookies.set('token', res.data.token.token, cookieSetting)
-      util.cookies.set('block', 'false', cookieSetting)
+      util.cookies.set('block', 'false')
 
       // 设置 vuex 用户信息
       await dispatch('careyshop/user/set', {

@@ -124,6 +124,7 @@ export default {
             .catch(() => {
               util.cookies.remove('token')
               util.cookies.remove('uuid')
+              this.refreshCode()
               this.loading = false
             })
         }

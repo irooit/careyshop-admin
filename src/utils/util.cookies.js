@@ -9,7 +9,7 @@ const cookies = {}
  * @param {Object} cookieSetting cookie setting
  */
 cookies.set = (name = 'default', value = '', cookieSetting = {}) => {
-  let currentCookieSetting = { expires: 1 }
+  let currentCookieSetting = { expires: null }
   Object.assign(currentCookieSetting, cookieSetting)
   Cookies.set(`careyshop-${process.env.VUE_APP_VERSION}-${name}`, value, currentCookieSetting)
 }
