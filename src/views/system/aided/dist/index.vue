@@ -11,8 +11,7 @@
       :loading="loading"
       :table-data="table"
       :trace-state="state"
-      @sort="handleSort"
-      @refresh="handleRefresh"/>
+      @sort="handleSort"/>
 
     <page-footer
       slot="footer"
@@ -67,16 +66,6 @@ export default {
       })
   },
   methods: {
-    // 刷新列表页面
-    handleRefresh(isTurning = false) {
-      if (isTurning) {
-        !(this.page.current - 1) || this.page.current--
-      }
-
-      this.$nextTick(() => {
-        this.$refs.header.handleFormSubmit()
-      })
-    },
     // 分页变化改动
     handlePaginationChange(val) {
       this.page = val

@@ -14,7 +14,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'vue-router',
       library: 'VueRouter',
-      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.3/dist/vue-router.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/vue-router@3.4.5/dist/vue-router.min.js',
       css: ''
     },
     {
@@ -32,7 +32,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'better-scroll',
       library: 'BetterScroll',
-      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.3/dist/better-scroll.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/better-scroll@2.0.4/dist/better-scroll.min.js',
       css: ''
     },
     {
@@ -44,7 +44,7 @@ if (process.env.VUE_APP_CDN === 'true') {
     {
       name: 'dayjs',
       library: 'dayjs',
-      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.8.35/dayjs.min.js',
+      js: 'https://cdn.jsdelivr.net/npm/dayjs@1.9.1/dayjs.min.js',
       css: ''
     },
     {
@@ -90,6 +90,12 @@ if (process.env.VUE_APP_CDN === 'true') {
       css: ''
     },
     {
+      name: 'vuedraggable',
+      library: 'vuedraggable',
+      js: 'https://cdn.jsdelivr.net/npm/vuedraggable@2.24.1/dist/vuedraggable.umd.min.js',
+      css: ''
+    },
+    {
       name: 'screenfull',
       library: 'screenfull',
       js: 'https://cdn.jsdelivr.net/npm/screenfull@5.0.2/dist/screenfull.min.js',
@@ -106,6 +112,18 @@ if (process.env.VUE_APP_CDN === 'true') {
       library: 'Cookies',
       js: 'https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js',
       css: ''
+    },
+    {
+      name: 'echarts',
+      library: 'echarts',
+      js: 'https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js',
+      css: ''
+    },
+    {
+      name: 'v-charts',
+      library: 'VeIndex',
+      js: 'https://cdn.jsdelivr.net/npm/v-charts@1.19.0/lib/index.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/v-charts@1.19.0/lib/style.min.css'
     },
     {
       name: '@careyshop/vue-print',

@@ -88,11 +88,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .thumbnail {
-    @extend %flex-center-col;
-  }
+.thumbnail {
+  @extend %flex-center-col;
+}
 
-  .sortable-ghost {
-    opacity: 0;
-  }
+.sortable-ghost {
+  opacity: 0;
+}
 </style>

@@ -9,18 +9,18 @@
 </template>
 
 <style lang="scss" scoped>
-  .page {
-    background: $color-text-main;
-    background-blend-mode: multiply, multiply;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.page {
+  background: $color-text-main;
+  background-blend-mode: multiply, multiply;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    .page_title {
-      font-size: 20px;
-      color: #FFF;
-    }
+  .page_title {
+    font-size: 20px;
+    color: #FFF;
   }
+}
 </style>

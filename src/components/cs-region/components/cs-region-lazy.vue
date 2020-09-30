@@ -78,8 +78,8 @@ export default {
 </script>
 
 <style scoped>
-  .region-control {
-    width: auto;
-    display: inline;
-  }
+.region-control {
+  width: auto;
+  display: inline;
+}
 </style>

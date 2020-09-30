@@ -409,36 +409,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tree-scroll {
-    max-height: 495px;
-    overflow: auto;
-    padding-bottom: 1px;
-  }
+.tree-scroll {
+  max-height: 495px;
+  overflow: auto;
+  padding-bottom: 1px;
+}
 
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-right: 8px;
-  }
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
 
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: block;
-  }
+.action:hover .active {
+  display: block;
+}
 
-  .move-tree {
-    color: $color-text-placehoder;
-    cursor: move;
-  }
+.move-tree {
+  color: $color-text-placehoder;
+  cursor: move;
+}
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
 </style>

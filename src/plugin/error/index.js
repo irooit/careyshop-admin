@@ -43,6 +43,11 @@ export default {
     }
 
     window.onerror = (event, source, lineno, colno, error) => {
+      // 暂时屏蔽"ResizeObserver loop limit exceeded"报错
+      if (event === 'ResizeObserver loop limit exceeded') {
+        return
+      }
+
       store.dispatch('careyshop/log/push', {
         message: get(error, 'message', 'Unknown error'),
         type: 'danger',

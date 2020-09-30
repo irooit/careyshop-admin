@@ -6,9 +6,7 @@
       @submit="handleSubmit"
       ref="header"/>
 
-    <page-main
-      :table-data="table"
-      @refresh="handleRefresh"/>
+    <page-main :table-data="table"/>
   </cs-container>
 </template>
 
@@ -31,12 +29,6 @@ export default {
     this.handleSubmit()
   },
   methods: {
-    // 刷新列表页面
-    handleRefresh() {
-      this.$nextTick(() => {
-        this.$refs.header.handleFormSubmit()
-      })
-    },
     // 确定查询
     handleSubmit(form) {
       this.loading = true

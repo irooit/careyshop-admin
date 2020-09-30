@@ -212,26 +212,26 @@ export default {
 </script>
 
 <style scoped>
-  .more-filter {
-    margin-bottom: -18px;
-  }
+.more-filter {
+  margin-bottom: -18px;
+}
 
-  .more-filter >>> label {
-    width: 70px;
-  }
+.more-filter >>> label {
+  width: 70px;
+}
 
-  .more-filter >>> .el-form-item__content {
-    margin-left: 70px;
-  }
+.more-filter >>> .el-form-item__content {
+  margin-left: 70px;
+}
 
-  .brand-name {
-    float: left;
-  }
+.brand-name {
+  float: left;
+}
 
-  .brand-category {
-    float: right;
-    color: #8492A6;
-    font-size: 12px;
-    padding-right: 15px;
-  }
+.brand-category {
+  float: right;
+  color: #8492A6;
+  font-size: 12px;
+  padding-right: 15px;
+}
 </style>

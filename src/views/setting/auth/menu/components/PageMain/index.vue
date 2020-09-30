@@ -629,52 +629,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tree-scroll {
-    max-height: 615px;
-    overflow: auto;
-    padding-bottom: 1px;
+.tree-scroll {
+  max-height: 615px;
+  overflow: auto;
+  padding-bottom: 1px;
+}
+
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
+
+.brother-showing {
+  i {
+    width: 16px;
   }
 
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-right: 8px;
+  .iconfont {
+    font-size: 16px;
+    vertical-align: baseline;
   }
+}
 
-  .brother-showing {
-    i {
-      width: 16px;
-    }
+.active {
+  display: none;
+}
 
-    .iconfont {
-      font-size: 16px;
-      vertical-align: baseline;
-    }
-  }
+.action:hover .active {
+  display: block;
+}
 
-  .active {
-    display: none;
-  }
+.move-tree {
+  color: $color-text-placehoder;
+  cursor: move;
+}
 
-  .action:hover .active {
-    display: block;
-  }
+.status-tree {
+  color: $color-text-placehoder;
+  text-decoration: line-through
+}
 
-  .move-tree {
-    color: $color-text-placehoder;
-    cursor: move;
-  }
-
-  .status-tree {
-    color: $color-text-placehoder;
-    text-decoration: line-through
-  }
-
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
 </style>

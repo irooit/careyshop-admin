@@ -781,88 +781,86 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
+
+.el-table /deep/ td {
+  background-color: #FFFFFF !important;
+}
+
+.order-summary {
+  color: $color-text-placehoder;
+  font-size: 13px;
+}
+
+.order-text {
+  p {
+    margin: 0;
   }
 
-  .el-table /deep/ td {
-    background-color: #FFFFFF !important;
-  }
-
-  .order-summary {
-    color: $color-text-placehoder;
+  .son {
+    color: $color-text-sub;
     font-size: 13px;
   }
+}
 
-  .order-text {
-    p {
-      margin: 0;
-    }
+.order-goods-list {
+  float: left;
 
-    .son {
-      color: $color-text-sub;
-      font-size: 13px;
-    }
-  }
-
-  .order-goods-list {
+  .goods-image {
     float: left;
+    width: 80px;
+    height: 80px;
+  }
 
-    .goods-image {
-      float: left;
-      width: 80px;
-      height: 80px;
+  .goods-image-small {
+    float: left;
+    width: 60px;
+    height: 60px;
+  }
+
+  .goods-info {
+    padding: 0 50px 0 100px;
+    min-width: 405px;
+
+    .goods-name {
+      height: 36px;
+      line-height: 18px;
+      overflow: hidden;
     }
 
-    .goods-image-small {
-      float: left;
-      width: 60px;
-      height: 60px;
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
 
-    .goods-info {
-      padding: 0 50px 0 100px;
-      min-width: 405px;
+    .service {
+      font-size: 13px;
+      color: $color-warning;
+    }
 
-      .goods-name {
-        height: 36px;
-        line-height: 18px;
-        overflow: hidden;
-      }
-
-      .link {
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          text-decoration: underline;
-        }
-      }
-
-      .service {
-        font-size: 13px;
-        color: $color-warning;
-      }
-
-      .complete {
-        font-size: 13px;
-        color: $color-success;
-      }
+    .complete {
+      font-size: 13px;
+      color: $color-success;
     }
   }
+}
 
-  .shop-price {
-    color: $color-danger;
-  }
+.shop-price {
+  color: $color-danger;
+}
 
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 
-  .order-button {
-    padding: 0;
-    font-size: 13px;
-  }
+.order-button {
+  padding: 0;
+  font-size: 13px;
+}
 </style>

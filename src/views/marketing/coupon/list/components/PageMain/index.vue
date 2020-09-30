@@ -159,7 +159,10 @@
           </el-tooltip>
           <span
             @click="handleGive(scope.row.coupon_id)"
-            :class="{link: auth.use}">{{scope.row.name}}</span>
+            :class="{
+              'link': auth.use,
+              'cs-expired': dayjs().isAfter(dayjs(scope.row.use_end_time))
+            }">{{scope.row.name}}</span>
         </template>
       </el-table-column>
 
@@ -645,6 +648,7 @@ import {
 } from '@/api/marketing/coupon_give'
 import * as clipboard from 'clipboard-polyfill'
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import { getUserLevelList } from '@/api/user/level'
 import VueTableExport from '@careyshop/vue-table-export'
 
@@ -666,6 +670,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       currentTableData: [],
       multipleSelection: [],
       userLevel: [],
@@ -924,6 +929,10 @@ export default {
           delCouponList(coupon_id)
             .then(() => {
               util.deleteDataList(this.currentTableData, coupon_id, 'coupon_id')
+              if (this.currentTableData.length <= 0) {
+                this.$emit('refresh', true)
+              }
+
               this.$message.success('操作成功')
             })
         })
@@ -1287,38 +1296,38 @@ export default {
 </script>
 
 <style scoped>
-  .help-block {
-    color: #909399;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -8px;
-  }
+.help-block {
+  color: #909399;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -8px;
+}
 
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 
-  .table-expand {
-    font-size: 0;
-    padding: 0 65px;
-  }
+.table-expand {
+  font-size: 0;
+  padding: 0 65px;
+}
 
-  .table-expand >>> label {
-    float: left;
-    width: 120px;
-    color: #99A9BF;
-  }
+.table-expand >>> label {
+  float: left;
+  width: 120px;
+  color: #99A9BF;
+}
 
-  .table-expand >>> .el-form-item__content {
-    display: block;
-    padding-left: 120px;
-  }
+.table-expand >>> .el-form-item__content {
+  display: block;
+  padding-left: 120px;
+}
 
-  .table-expand .el-form-item {
-    margin-right: 0;
-    margin-bottom: 0;
-    width: 50%;
-  }
+.table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 50%;
+}
 </style>

@@ -52,24 +52,24 @@ export default {
 </script>
 
 <style scoped>
-  .player-dialog >>> .el-image-viewer__close {
-    position: fixed;
-    color: #FFF;
-  }
+.player-dialog >>> .el-image-viewer__close {
+  position: fixed;
+  color: #FFF;
+}
 
-  .player-dialog >>> .el-dialog {
-    margin: 0 !important;
-    border-radius: 0;
-    box-shadow: none;
-    background: inherit;
-  }
+.player-dialog >>> .el-dialog {
+  margin: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
+  background: inherit;
+}
 
-  .player-dialog >>> .el-dialog__header {
-    display: none;
-  }
+.player-dialog >>> .el-dialog__header {
+  display: none;
+}
 
-  .player-dialog >>> .el-dialog__body {
-    padding: 0;
-    text-align: center;
-  }
+.player-dialog >>> .el-dialog__body {
+  padding: 0;
+  text-align: center;
+}
 </style>

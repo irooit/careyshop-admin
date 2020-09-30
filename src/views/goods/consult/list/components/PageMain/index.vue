@@ -315,62 +315,60 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .el-table /deep/ td {
-    background-color: #FFFFFF !important;
+.el-table /deep/ td {
+  background-color: #FFFFFF !important;
+}
+
+.goods-consult {
+  height: 80px;
+  margin: 10px 0;
+}
+
+.goods-image {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.goods-info {
+  float: left;
+  width: 80%;
+
+  .link:hover {
+    cursor: pointer;
+    color: $color-primary;
+    text-decoration: underline;
   }
+}
 
-  .goods-consult {
-    height: 80px;
-    margin: 10px 0;
-  }
+.consult-content {
+  color: $color-text-sub;
+  font-size: 13px;
+}
 
-  .goods-image {
-    float: left;
-    width: 80px;
-    height: 80px;
-  }
+.consult-content p {
+  margin: 10px 0 0 0;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
-  .goods-info {
-    float: left;
-    width: 80%;
-
-    .link {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
+  .title {
+    &:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
+}
 
-  .consult-content {
-    color: $color-text-sub;
-    font-size: 13px;
-  }
+.user-info p {
+  line-height: 1.3;
+}
 
-  .consult-content p {
-    margin: 10px 0 0 0;
-    line-height: 1.3;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-
-    .title {
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .user-info p {
-    line-height: 1.3;
-  }
-
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 </style>

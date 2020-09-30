@@ -6,7 +6,10 @@
     size="mini"
     style="margin-bottom: -18px;">
     <el-form-item label="模块" prop="module">
-      <el-radio-group v-model="form.module" size="small">
+      <el-radio-group
+          v-model="form.module"
+          @change="handleFormSubmit"
+          size="small">
         <el-radio-button label="admin">后台</el-radio-button>
         <el-radio-button label="home">前台</el-radio-button>
         <el-radio-button label="api">API</el-radio-button>

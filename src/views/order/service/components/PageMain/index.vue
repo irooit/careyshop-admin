@@ -361,74 +361,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
+
+.el-table /deep/ td {
+  background-color: #FFFFFF !important;
+}
+
+.input-with-select /deep/ .el-input-group__prepend {
+  background-color: #FFF;
+}
+
+.service-event /deep/ .el-badge__content {
+  margin-top: 5px;
+  margin-right: -5px;
+}
+
+.service-summary {
+  color: $color-text-placehoder;
+  font-size: 13px;
+}
+
+.service-text {
+  p {
+    margin: 0;
   }
 
-  .el-table /deep/ td {
-    background-color: #FFFFFF !important;
-  }
-
-  .input-with-select /deep/ .el-input-group__prepend {
-    background-color: #FFF;
-  }
-
-  .service-event /deep/ .el-badge__content {
-    margin-top: 5px;
-    margin-right: -5px;
-  }
-
-  .service-summary {
-    color: $color-text-placehoder;
+  .son {
+    color: $color-text-sub;
     font-size: 13px;
   }
+}
 
-  .service-text {
-    p {
-      margin: 0;
+.service-goods {
+  float: left;
+
+  .goods-image {
+    float: left;
+    width: 80px;
+    height: 80px;
+  }
+
+  .goods-info {
+    padding: 0 50px 0 100px;
+
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
 
-    .son {
-      color: $color-text-sub;
+    .delivery {
       font-size: 13px;
     }
   }
+}
 
-  .service-goods {
-    float: left;
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
 
-    .goods-image {
-      float: left;
-      width: 80px;
-      height: 80px;
-    }
-
-    .goods-info {
-      padding: 0 50px 0 100px;
-
-      .link {
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          text-decoration: underline;
-        }
-      }
-
-      .delivery {
-        font-size: 13px;
-      }
-    }
-  }
-
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
-
-  .service-button {
-    padding: 0;
-    font-size: 13px;
-  }
+.service-button {
+  padding: 0;
+  font-size: 13px;
+}
 </style>

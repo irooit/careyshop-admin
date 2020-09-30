@@ -194,13 +194,13 @@ export default {
 </script>
 
 <style scoped>
-  .dynamic-source-key {
-    margin-right: 10px;
-    width: 120px;
-  }
+.dynamic-source-key {
+  margin-right: 10px;
+  width: 120px;
+}
 
-  .dynamic-source-value {
-    margin-right: 10px;
-    width: 190px;
-  }
+.dynamic-source-value {
+  margin-right: 10px;
+  width: 190px;
+}
 </style>

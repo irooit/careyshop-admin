@@ -58,6 +58,9 @@
         prop="name"
         sortable="custom"
         min-width="180">
+        <template slot-scope="scope">
+          <span :class="{'cs-expired': dayjs().isAfter(dayjs(scope.row.end_time))}">{{scope.row.name}}</span>
+        </template>
       </el-table-column>
 
       <el-table-column
@@ -293,6 +296,7 @@ import {
   setPromotionStatus
 } from '@/api/marketing/promotion'
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import { getCouponSelect } from '@/api/marketing/coupon'
 
 export default {
@@ -309,6 +313,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       currentTableData: [],
       multipleSelection: [],
       statusMap: {
@@ -631,22 +636,22 @@ export default {
 </script>
 
 <style scoped>
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: inline-block;
-  }
+.action:hover .active {
+  display: inline-block;
+}
 
-  .promotion-label {
-    width: 80px;
-    padding-bottom: 10px;
-    display: inline-block;
-  }
+.promotion-label {
+  width: 80px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
 
-  .promotion-input {
-    width: 175px;
-    margin-right: 10px;
-  }
+.promotion-input {
+  width: 175px;
+  margin-right: 10px;
+}
 </style>

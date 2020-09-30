@@ -152,49 +152,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .icon-view {
-    font-size: 24px;
-    line-height: 40px;
-  }
+.icon-view {
+  font-size: 24px;
+  line-height: 40px;
+}
 
-  .group {
-    max-height: 400px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border-top: none;
-    border-bottom: none;
+.group {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-top: none;
+  border-bottom: none;
 
-    .class {
-      .class-title {
-        line-height: 30px;
+  .class {
+    .class-title {
+      line-height: 30px;
+      text-align: center;
+      background-color: $color-bg;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+
+    .class-row {
+      .class-col {
         text-align: center;
-        background-color: $color-bg;
-        border-radius: 4px;
-        margin: 10px 0;
-      }
+        color: $color-text-sub;
 
-      .class-row {
-        .class-col {
-          text-align: center;
-          color: $color-text-sub;
+        .iconfont {
+          line-height: 40px;
+          font-size: 24px;
+        }
+
+        &:hover {
+          color: $color-text-main;
+          background-color: $color-bg;
+          border-radius: 4px;
+          box-shadow: inset 0 0 0 1px $color-border-1;
 
           .iconfont {
-            line-height: 40px;
-            font-size: 24px;
-          }
-
-          &:hover {
-            color: $color-text-main;
-            background-color: $color-bg;
-            border-radius: 4px;
-            box-shadow: inset 0 0 0 1px $color-border-1;
-
-            .iconfont {
-              font-size: 38px;
-            }
+            font-size: 38px;
           }
         }
       }
     }
   }
+}
 </style>

@@ -37,8 +37,12 @@
       <el-table-column align="center" type="selection" width="55"/>
 
       <el-table-column
-        label="兑换码"
-        prop="exchange_code">
+          label="兑换码">
+        <template slot-scope="scope">
+          <span :class="{
+            'cs-expired': dayjs().isAfter(dayjs(scope.row.get_coupon.use_end_time))
+          }">{{scope.row.exchange_code}}</span>
+        </template>
       </el-table-column>
 
       <el-table-column
@@ -243,6 +247,7 @@
 
 <script>
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import { delCouponGiveList, recCouponGiveList } from '@/api/marketing/coupon_give'
 
 export default {
@@ -265,6 +270,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       infoVisible: false,
       currentTableData: [],
       multipleSelection: [],
@@ -364,6 +370,10 @@ export default {
             delCouponGiveList(coupon_give_id)
               .then(() => {
                 util.deleteDataList(this.currentTableData, coupon_give_id, 'coupon_give_id')
+                if (this.currentTableData.length <= 0) {
+                  this.$emit('refresh', true)
+                }
+
                 this.$message.success('操作成功')
               })
           }
@@ -373,6 +383,10 @@ export default {
             recCouponGiveList(coupon_give_id)
               .then(() => {
                 util.deleteDataList(this.currentTableData, coupon_give_id, 'coupon_give_id')
+                if (this.currentTableData.length <= 0) {
+                  this.$emit('refresh', true)
+                }
+
                 this.$message.success('操作成功')
               })
           }

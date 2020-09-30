@@ -9,8 +9,7 @@
     <page-main
       :loading="loading"
       :table-data="table"
-      @sort="handleSort"
-      @refresh="handleRefresh"/>
+      @sort="handleSort"/>
   </cs-container>
 </template>
 
@@ -37,12 +36,6 @@ export default {
     this.handleSubmit()
   },
   methods: {
-    // 刷新列表页面
-    handleRefresh() {
-      this.$nextTick(() => {
-        this.$refs.header.handleFormSubmit()
-      })
-    },
     // 排序刷新
     handleSort(val) {
       this.order = val

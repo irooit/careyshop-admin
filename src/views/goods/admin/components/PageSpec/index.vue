@@ -153,22 +153,22 @@ export default {
 </script>
 
 <style scoped>
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
 
-  .clearfix:after {
-    clear: both;
-  }
+.clearfix:after {
+  clear: both;
+}
 
-  .tac >>> .el-card {
-    border-radius: 0;
-  }
+.tac >>> .el-card {
+  border-radius: 0;
+}
 
-  .box-card {
-    height: 400px;
-    margin-left: -1px;
-  }
+.box-card {
+  height: 400px;
+  margin-left: -1px;
+}
 </style>

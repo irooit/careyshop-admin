@@ -435,8 +435,8 @@ export default {
       let msg = '确定要执行该操作吗?'
       const node = this.$refs.tree.getNode(key)
 
-      if (node.data.children_total > 0 || node.data.aricle_total > 0) {
-        msg = `该分类下有 ${node.data.children_total} 个子分类，${node.data.aricle_total} 篇关联文章，是否删除?`
+      if (node.data.children_total > 0 || node.data.article_total > 0) {
+        msg = `该分类下有 ${node.data.children_total} 个子分类，${node.data.article_total} 篇关联文章，是否删除?`
       }
 
       this.$confirm(msg, '提示', {
@@ -508,40 +508,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tree-scroll {
-    max-height: 430px;
-    overflow: auto;
-    padding-bottom: 1px;
-  }
+.tree-scroll {
+  max-height: 430px;
+  overflow: auto;
+  padding-bottom: 1px;
+}
 
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-right: 8px;
-  }
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
 
-  .brother-showing i {
-    width: 16px;
-  }
+.brother-showing i {
+  width: 16px;
+}
 
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: block;
-  }
+.action:hover .active {
+  display: block;
+}
 
-  .move-tree {
-    color: $color-text-placehoder;
-    cursor: move;
-  }
+.move-tree {
+  color: $color-text-placehoder;
+  cursor: move;
+}
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
 </style>

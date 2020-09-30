@@ -338,9 +338,9 @@ export default {
 </script>
 
 <style scoped>
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 </style>

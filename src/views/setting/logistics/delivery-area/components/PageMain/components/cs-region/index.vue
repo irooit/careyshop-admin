@@ -142,35 +142,35 @@ export default {
 </script>
 
 <style scoped>
-  .tree-scroll {
-    height: 250px;
-    overflow: auto;
-    padding-bottom: 1px;
-  }
+.tree-scroll {
+  height: 250px;
+  overflow: auto;
+  padding-bottom: 1px;
+}
 
-  .region-tag {
-    margin: 0 10px 10px 0;
-  }
+.region-tag {
+  margin: 0 10px 10px 0;
+}
 
-  .not-region {
-    color: #99A9BF;
-    text-align: center;
-  }
+.not-region {
+  color: #99A9BF;
+  text-align: center;
+}
 
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-right: 8px;
-  }
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
 
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: block;
-  }
+.action:hover .active {
+  display: block;
+}
 </style>

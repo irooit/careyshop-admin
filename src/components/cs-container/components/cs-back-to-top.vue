@@ -39,29 +39,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .top {
-    bottom: 110px;
-  }
+.top {
+  bottom: 110px;
+}
 
-  .back {
-    bottom: 75px;
-  }
+.back {
+  bottom: 75px;
+}
 
-  .cs-floating {
-    position: absolute;
-    z-index: 1;
-    right: 59px;
-    width: 32px;
-    border-radius: 4px;
-    background-color: rgba($color-text-sub, .7);
-    color: #FFF;
-    line-height: 25px;
-    text-align: center;
-    transition: all .3s;
-    @extend %unable-select;
+.cs-floating {
+  position: absolute;
+  z-index: 1;
+  right: 59px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: rgba($color-text-sub, .7);
+  color: #FFF;
+  line-height: 25px;
+  text-align: center;
+  transition: all .3s;
+  @extend %unable-select;
 
-    &:hover {
-      background-color: rgba($color-text-normal, .9);
-    }
+  &:hover {
+    background-color: rgba($color-text-normal, .9);
   }
+}
 </style>

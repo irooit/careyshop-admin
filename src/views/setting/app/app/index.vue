@@ -8,8 +8,7 @@
 
     <page-main
       :loading="loading"
-      :table-data="table"
-      @refresh="handleRefresh"/>
+      :table-data="table"/>
   </cs-container>
 </template>
 
@@ -32,12 +31,6 @@ export default {
     this.handleSubmit()
   },
   methods: {
-    // 刷新列表页面
-    handleRefresh() {
-      this.$nextTick(() => {
-        this.$refs.header.handleFormSubmit()
-      })
-    },
     // 提交查询
     handleSubmit(form) {
       this.loading = true

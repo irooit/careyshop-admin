@@ -144,20 +144,20 @@ export default {
 </script>
 
 <style scoped>
-  .form-box {
-    padding: 20px;
-    background-color: #FFF;
-  }
+.form-box {
+  padding: 20px;
+  background-color: #FFF;
+}
 
-  .form-button {
-    padding-left: 5px;
-  }
+.form-button {
+  padding-left: 5px;
+}
 
-  .active {
-    display: none;
-  }
+.active {
+  display: none;
+}
 
-  .action:hover .active {
-    display: inline;
-  }
+.action:hover .active {
+  display: inline;
+}
 </style>

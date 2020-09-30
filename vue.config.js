@@ -41,14 +41,14 @@ module.exports = {
     loaderOptions: {
       // 设置 scss 公用变量文件
       sass: {
-        additionalData: `@import '~@/assets/style/public.scss';`
+        additionalData: `@import '~@/assets/style/base.scss';`
       }
     }
   },
   // 多页配置
   pages,
-  // 不输出 map 文件
-  productionSourceMap: false,
+  // 开发环境下输出 map 文件
+  productionSourceMap: process.env.NODE_ENV === 'development',
   // build时 超过10K的打包成gzip 减小体积
   configureWebpack: config => {
     const configNew = {}

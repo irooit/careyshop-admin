@@ -491,38 +491,38 @@ export default {
 </script>
 
 <style scoped>
-  .print-main {
-    background: #FFFFFF;
-    /*font: 12px/1.5 "宋体", Helvetica, Arial, sans-serif;*/
-  }
+.print-main {
+  background: #FFFFFF;
+  /*font: 12px/1.5 "宋体", Helvetica, Arial, sans-serif;*/
+}
 
-  .print-order {
-    padding: 20px;
-    page-break-after: always;
-  }
+.print-order {
+  padding: 20px;
+  page-break-after: always;
+}
 
-  .print-order table {
-    width: 100%;
-    border-top: 1px solid #CCC;
-  }
+.print-order table {
+  width: 100%;
+  border-top: 1px solid #CCC;
+}
 
-  .print-order table tr th,
-  .print-order table tr td {
-    padding: 4px 5px;
-    text-align: left;
-  }
+.print-order table tr th,
+.print-order table tr td {
+  padding: 4px 5px;
+  text-align: left;
+}
 
-  .print-order table tr td ul li {
-    list-style: none;
-  }
+.print-order table tr td ul li {
+  list-style: none;
+}
 
-  .print-order table tr td ul span {
-    float: right;
-  }
+.print-order table tr td ul span {
+  float: right;
+}
 
-  .pre-text {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
+.pre-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
 </style>

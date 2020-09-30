@@ -384,170 +384,170 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '~@/assets/style/fixed/tinymce.scss';
+@import '~@/assets/style/fixed/tinymce.scss';
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.gallery {
+  float: left;
+  width: 460px;
+}
+
+.attr-label {
+  color: $color-text-sub;
+}
+
+.parameter {
+  padding: 0 10px 10px;
+  border-bottom: 1px solid $color-border-3;
+  font-size: 13px;
+  color: $color-text-normal;
+
+  .more-par {
+    margin-top: -5px;
+    text-align: right;
   }
 
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
+  .parameter-list {
+    padding: 15px 0 15px;
   }
 
-  .clearfix:after {
-    clear: both
+  ul {
+    margin: 0;
+    padding: 20px 0 15px;
+    overflow: hidden;
+    _zoom: 1;
   }
 
-  .gallery {
+  ul li {
+    width: 20%;
+    padding-left: 42px;
     float: left;
-    width: 460px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.itemInfo {
+  margin-left: 480px;
+  font-size: 14px;
+  color: $color-text-sub;
+
+  .dt {
+    float: left;
+    padding-left: 10px;
+    line-height: 20px;
   }
 
-  .attr-label {
-    color: $color-text-sub;
-  }
+  .dd {
+    margin-left: 80px;
 
-  .parameter {
-    padding: 0 10px 10px;
-    border-bottom: 1px solid $color-border-3;
-    font-size: 13px;
-    color: $color-text-normal;
-
-    .more-par {
-      margin-top: -5px;
-      text-align: right;
-    }
-
-    .parameter-list {
-      padding: 15px 0 15px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 20px 0 15px;
-      overflow: hidden;
-      _zoom: 1;
-    }
-
-    ul li {
-      width: 20%;
-      padding-left: 42px;
-      float: left;
-      margin-bottom: 5px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-
-  .itemInfo {
-    margin-left: 480px;
-    font-size: 14px;
-    color: $color-text-sub;
-
-    .dt {
-      float: left;
-      padding-left: 10px;
-      line-height: 20px;
-    }
-
-    .dd {
-      margin-left: 80px;
-
-      .price {
-        color: $color-danger;
-        overflow: hidden;
-      }
-    }
-
-    .goods-name {
-      color: $color-text-normal;
-      font-size: 16px;
-    }
-
-    .product-name {
+    .price {
       color: $color-danger;
+      overflow: hidden;
     }
+  }
 
-    .summary-first {
-      position: relative;
-      padding: 5px 0;
+  .goods-name {
+    color: $color-text-normal;
+    font-size: 16px;
+  }
 
-      .summary-price-wrap {
-        background: #F3F3F3;
+  .product-name {
+    color: $color-danger;
+  }
 
-        .price-bg {
-          background: url('~@/assets/image/price-bg.png') 0 -12px repeat-x #EFEFEF;
-        }
+  .summary-first {
+    position: relative;
+    padding: 5px 0;
 
-        .summary-price {
-          position: relative;
-          padding-bottom: 10px;
-        }
+    .summary-price-wrap {
+      background: #F3F3F3;
 
-        .summary-info {
-          position: absolute;
-          right: 10px;
-          top: 10px;
+      .price-bg {
+        background: url('~@/assets/image/price-bg.png') 0 -12px repeat-x #EFEFEF;
+      }
 
-          .content {
-            text-align: center;
-            width: 100px;
-            float: left;
+      .summary-price {
+        position: relative;
+        padding-bottom: 10px;
+      }
 
-            p {
-              margin: 5px 0;
-            }
+      .summary-info {
+        position: absolute;
+        right: 10px;
+        top: 10px;
 
-            span {
-              color: #005EA7;
-            }
+        .content {
+          text-align: center;
+          width: 100px;
+          float: left;
+
+          p {
+            margin: 5px 0;
+          }
+
+          span {
+            color: #005EA7;
           }
         }
       }
     }
   }
+}
 
-  .goods-spec {
-    @extend %flex-center-row;
-    float: left;
-    font-size: 12px;
-    line-height: 38px;
-    margin: 0 5px 5px 0;
-    border: 1px solid $color-border-1;
+.goods-spec {
+  @extend %flex-center-row;
+  float: left;
+  font-size: 12px;
+  line-height: 38px;
+  margin: 0 5px 5px 0;
+  border: 1px solid $color-border-1;
 
-    &.active {
-      color: $color-danger;
-      border-color: $color-danger;
-    }
+  &.active {
+    color: $color-danger;
+    border-color: $color-danger;
+  }
 
-    &:hover {
-      @extend %unable-select;
-      border-color: $color-danger;
-    }
+  &:hover {
+    @extend %unable-select;
+    border-color: $color-danger;
+  }
 
-    &.disabled {
-      cursor: not-allowed;
-      color: $color-text-placehoder;
-      border: 1px dashed $color-border-3;
-
-      .item-info {
-        opacity: 0.5;
-      }
-    }
-
-    .item-name {
-      padding: 0 10px;
-    }
+  &.disabled {
+    cursor: not-allowed;
+    color: $color-text-placehoder;
+    border: 1px dashed $color-border-3;
 
     .item-info {
-      margin: 1px;
-      width: 36px;
-      height: 36px;
-      line-height: 16px;
+      opacity: 0.5;
     }
   }
+
+  .item-name {
+    padding: 0 10px;
+  }
+
+  .item-info {
+    margin: 1px;
+    width: 36px;
+    height: 36px;
+    line-height: 16px;
+  }
+}
 </style>

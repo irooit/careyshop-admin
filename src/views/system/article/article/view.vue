@@ -55,30 +55,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '~@/assets/style/fixed/tinymce.scss';
+@import '~@/assets/style/fixed/tinymce.scss';
 
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
-  }
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
+}
 
-  .clearfix {
-    text-align: center;
-  }
+.clearfix {
+  text-align: center;
+}
 
-  .clearfix span, a {
-    color: $color-text-sub;
-    font-size: 13px;
-    margin-right: 15px;
-  }
+.clearfix span, a {
+  color: $color-text-sub;
+  font-size: 13px;
+  margin-right: 15px;
+}
 
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
 
-  .clearfix:after {
-    clear: both;
-  }
+.clearfix:after {
+  clear: both;
+}
 </style>

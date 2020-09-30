@@ -393,84 +393,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .el-table /deep/ td {
-    background-color: #FFFFFF !important;
-  }
+.el-table /deep/ td {
+  background-color: #FFFFFF !important;
+}
 
-  .comment_thumb {
-    width: 40px;
-    height: 40px;
-    margin: 5px 5px 0 0;
-  }
+.comment_thumb {
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px 0 0;
+}
 
-  .comment_thumb /deep/ img {
-    cursor: pointer;
-  }
+.comment_thumb /deep/ img {
+  cursor: pointer;
+}
 
-  .comment_thumb /deep/ .el-image__error {
-    text-align: center;
-    line-height: 1.4;
-  }
+.comment_thumb /deep/ .el-image__error {
+  text-align: center;
+  line-height: 1.4;
+}
 
-  .comment-son {
-    color: $color-text-sub;
-    font-size: 13px;
-  }
+.comment-son {
+  color: $color-text-sub;
+  font-size: 13px;
+}
 
-  .goods-comment {
-    margin: 10px 0;
+.goods-comment {
+  margin: 10px 0;
 
-    p {
-      margin: 0;
-      line-height: 1.3;
-
-      .link {
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .goods-image {
-    float: left;
-    width: 80px;
-    height: 80px;
-  }
-
-  .goods-info {
-    float: left;
-    width: 70%;
-
-    p {
-      margin: 0;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
-
-  .goods_user p {
+  p {
     margin: 0;
-  }
+    line-height: 1.3;
 
-  .level-icon {
-    margin-left: 5px;
-    line-height: 0;
-    vertical-align: text-bottom;
-  }
-
-  .no-content {
-    color: $color-text-placehoder;
-  }
-
-  .link {
-    &:hover {
+    .link:hover {
       cursor: pointer;
       color: $color-primary;
       text-decoration: underline;
     }
   }
+}
+
+.goods-image {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.goods-info {
+  float: left;
+  width: 70%;
+
+  p {
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.goods_user p {
+  margin: 0;
+}
+
+.level-icon {
+  margin-left: 5px;
+  line-height: 0;
+  vertical-align: text-bottom;
+}
+
+.no-content {
+  color: $color-text-placehoder;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: $color-primary;
+  text-decoration: underline;
+}
 </style>

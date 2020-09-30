@@ -59,7 +59,12 @@
             placement="top-start">
             <i class="el-icon-tickets cs-pr-5"/>
           </el-tooltip>
-          <span :class="{link: auth.use}" @click="handleUse(scope.row.card_id)">{{scope.row.name}}</span>
+          <span
+              @click="handleUse(scope.row.card_id)"
+              :class="{
+                'link': auth.use,
+                'cs-expired': dayjs().isAfter(dayjs(scope.row.end_time))
+              }">{{scope.row.name}}</span>
         </template>
       </el-table-column>
 
@@ -289,6 +294,7 @@ import {
   setCardStatus
 } from '@/api/marketing/card'
 import util from '@/utils/util'
+import dayjs from 'dayjs'
 import VueTableExport from '@careyshop/vue-table-export'
 import { getCardUseExport } from '@/api/marketing/card_use'
 
@@ -306,6 +312,7 @@ export default {
   },
   data() {
     return {
+      dayjs,
       currentTableData: [],
       multipleSelection: [],
       dialogLoading: false,
@@ -524,6 +531,10 @@ export default {
           delCardList(card_id)
             .then(() => {
               util.deleteDataList(this.currentTableData, card_id, 'card_id')
+              if (this.currentTableData.length <= 0) {
+                this.$emit('refresh', true)
+              }
+
               this.$message.success('操作成功')
             })
         })
@@ -684,16 +695,16 @@ export default {
 </script>
 
 <style scoped>
-  .help-block {
-    color: #909399;
-    font-size: 12px;
-    line-height: 2;
-    margin-bottom: -8px;
-  }
+.help-block {
+  color: #909399;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: -8px;
+}
 
-  .link:hover {
-    cursor: pointer;
-    color: #409EFF;
-    text-decoration: underline;
-  }
+.link:hover {
+  cursor: pointer;
+  color: #409EFF;
+  text-decoration: underline;
+}
 </style>

@@ -121,8 +121,8 @@ export default {
 </script>
 
 <style scoped>
-  .form-box {
-    padding: 20px;
-    background-color: #FFF;
-  }
+.form-box {
+  padding: 20px;
+  background-color: #FFF;
+}
 </style>

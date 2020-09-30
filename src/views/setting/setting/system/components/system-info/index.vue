@@ -432,6 +432,17 @@
       </el-form-item>
 
       <el-form-item
+          :label="form.stats_time.description"
+          prop="stats_time">
+        <el-input-number
+            v-model="form.stats_time.value"
+            :placeholder="form.stats_time.description"
+            controls-position="right"
+            :min="0"/>
+        <div class="help-block" v-html="form.stats_time.help_text"></div>
+      </el-form-item>
+
+      <el-form-item
         :label="form.card_auth.description"
         prop="card_auth"
         size="small">
@@ -594,32 +605,32 @@ export default {
 </script>
 
 <style scoped>
-  .popover-image {
-    text-align: center;
-    line-height: 0;
-  }
+.popover-image {
+  text-align: center;
+  line-height: 0;
+}
 
-  .popover-image >>> img {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.popover-image >>> img {
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-  .el-image >>> .el-image__error {
-    line-height: 1.4;
-  }
+.el-image >>> .el-image__error {
+  line-height: 1.4;
+}
 
-  .dynamic-domain {
-    margin-right: 10px;
-    width: 320px;
-  }
+.dynamic-domain {
+  margin-right: 10px;
+  width: 320px;
+}
 
-  .dynamic-platform-key {
-    margin-right: 10px;
-    width: 120px;
-  }
+.dynamic-platform-key {
+  margin-right: 10px;
+  width: 120px;
+}
 
-  .dynamic-platform-value {
-    margin-right: 10px;
-    width: 190px;
-  }
+.dynamic-platform-value {
+  margin-right: 10px;
+  width: 190px;
+}
 </style>

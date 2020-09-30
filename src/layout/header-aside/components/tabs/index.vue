@@ -35,6 +35,7 @@
         @command="command => handleControlItemClick(command)">
         <i class="el-icon-circle-close" style="font-size: 13px;"/>
         <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="refresh" icon="el-icon-refresh">刷新页面</el-dropdown-item>
           <el-dropdown-item command="left" icon="el-icon-d-arrow-left">关闭左侧</el-dropdown-item>
           <el-dropdown-item command="right" icon="el-icon-d-arrow-right">关闭右侧</el-dropdown-item>
           <el-dropdown-item command="other" icon="el-icon-close">关闭其它</el-dropdown-item>
@@ -60,9 +61,11 @@ export default {
       contentmenuX: 0,
       contentmenuY: 0,
       contextmenuListIndex: [
+        { icon: 'el-icon-refresh', title: '刷新页面', value: 'refresh' },
         { icon: 'el-icon-circle-close', title: '关闭全部', value: 'all' }
       ],
       contextmenuList: [
+        { icon: 'el-icon-refresh', title: '刷新页面', value: 'refresh' },
         { icon: 'el-icon-d-arrow-left', title: '关闭左侧', value: 'left' },
         { icon: 'el-icon-d-arrow-right', title: '关闭右侧', value: 'right' },
         { icon: 'el-icon-close', title: '关闭其它', value: 'other' },
@@ -145,6 +148,9 @@ export default {
 
       const params = { pageSelect: tagName }
       switch (command) {
+        case 'refresh':
+          this.$router.push({ name: 'refresh' })
+          break
         case 'left':
           this.closeLeft(params)
           break

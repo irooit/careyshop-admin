@@ -839,8 +839,8 @@ export default {
 </script>
 
 <style scoped>
-  .tab-box {
-    padding: 5px 10px;
-    background-color: #FFF;
-  }
+.tab-box {
+  padding: 5px 10px;
+  background-color: #FFF;
+}
 </style>

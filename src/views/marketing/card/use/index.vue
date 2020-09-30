@@ -9,8 +9,7 @@
     <page-main
       :loading="loading"
       :table-data="table"
-      :card-data="cardData"
-      @refresh="handleRefresh"/>
+      :card-data="cardData"/>
 
     <page-footer
       slot="footer"
@@ -71,16 +70,6 @@ export default {
       })
   },
   methods: {
-    // 刷新列表页面
-    handleRefresh(isTurning = false) {
-      if (isTurning) {
-        !(this.page.current - 1) || this.page.current--
-      }
-
-      this.$nextTick(() => {
-        this.$refs.header.handleFormSubmit()
-      })
-    },
     // 分页变化改动
     handlePaginationChange(val) {
       this.page = val

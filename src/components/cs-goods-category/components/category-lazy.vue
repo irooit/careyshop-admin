@@ -70,8 +70,8 @@ export default {
 </script>
 
 <style scoped>
-  .category-control {
-    width: auto;
-    display: inline;
-  }
+.category-control {
+  width: auto;
+  display: inline;
+}
 </style>

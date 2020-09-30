@@ -1194,45 +1194,45 @@ export default {
 </script>
 
 <style scoped>
-  .proportion {
-    padding: 0 8px;
-  }
+.proportion {
+  padding: 0 8px;
+}
 
-  .size-input {
-    width: 82%;
-  }
+.size-input {
+  width: 82%;
+}
 
-  .image {
-    text-align: center;
-  }
+.image {
+  text-align: center;
+}
 
-  .image >>> img {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+.image >>> img {
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-  .image-info {
-    font-size: 13px;
-    color: #999;
-  }
+.image-info {
+  font-size: 13px;
+  color: #999;
+}
 
-  .bottom {
-    margin-top: 5px;
-    line-height: 15px;
-  }
+.bottom {
+  margin-top: 5px;
+  line-height: 15px;
+}
 
-  .button {
-    margin-right: 10px;
-    float: left;
-  }
+.button {
+  margin-right: 10px;
+  float: left;
+}
 
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
 
-  .clearfix:after {
-    clear: both;
-  }
+.clearfix:after {
+  clear: both;
+}
 </style>

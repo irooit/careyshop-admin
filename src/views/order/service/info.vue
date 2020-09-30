@@ -614,121 +614,119 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .box-card {
-    border-radius: 0;
-    border: 1px solid $color-border-1;
+.box-card {
+  border-radius: 0;
+  border: 1px solid $color-border-1;
 
-    .card-title {
-      margin-top: 0;
-    }
-
-    .service-info {
-      display: table;
-      font-size: 14px;
-      line-height: 28px;
-
-      .dt {
-        float: left;
-        width: 100px;
-        color: #99A9BF;
-      }
-
-      .dd {
-        padding-left: 100px;
-      }
-
-      .number {
-        width: 150px;
-        text-align: right;
-      }
-
-      .link {
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          text-decoration: underline;
-        }
-      }
-    }
+  .card-title {
+    margin-top: 0;
   }
 
-  .service-left {
-    margin-bottom: 20px;
-    border-right: 1px solid $color-border-1;
+  .service-info {
+    display: table;
+    font-size: 14px;
+    line-height: 28px;
 
-    .level-icon {
-      margin-left: 5px;
-      line-height: 0;
-      vertical-align: text-bottom;
+    .dt {
+      float: left;
+      width: 100px;
+      color: #99A9BF;
+    }
+
+    .dd {
+      padding-left: 100px;
+    }
+
+    .number {
+      width: 150px;
+      text-align: right;
+    }
+
+    .link:hover {
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
+}
 
-  .service-log {
-    span {
-      color: $color-info;
-    }
+.service-left {
+  margin-bottom: 20px;
+  border-right: 1px solid $color-border-1;
 
-    .comment {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      word-break: break-all;
-    }
+  .level-icon {
+    margin-left: 5px;
+    line-height: 0;
+    vertical-align: text-bottom;
+  }
+}
+
+.service-log {
+  span {
+    color: $color-info;
   }
 
-  .goods-image {
-    float: left;
-    width: 60px;
-    height: 60px;
+  .comment {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+.goods-image {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.goods-info {
+  float: left;
+  width: 80%;
+  margin-left: 10px;
+
+  .name {
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
 
     &:hover {
       cursor: pointer;
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 
-  .goods-info {
-    float: left;
-    width: 80%;
-    margin-left: 10px;
-
-    .name {
-      height: 36px;
-      line-height: 18px;
-      overflow: hidden;
-
-      &:hover {
-        cursor: pointer;
-        color: $color-primary;
-        text-decoration: underline;
-      }
-    }
-
-    .specs {
-      margin: 0;
-      font-size: 12px;
-      color: $color-info;
-    }
+  .specs {
+    margin: 0;
+    font-size: 12px;
+    color: $color-info;
   }
+}
 
-  .image_thumb {
-    width: 40px;
-    height: 40px;
-    margin: 5px 5px 0 0;
-  }
+.image_thumb {
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px 0 0;
+}
 
-  .image_thumb /deep/ img {
-    cursor: pointer;
-  }
+.image_thumb /deep/ img {
+  cursor: pointer;
+}
 
-  .image_thumb /deep/ .el-image__error {
-    text-align: center;
-    line-height: 1.4;
-  }
+.image_thumb /deep/ .el-image__error {
+  text-align: center;
+  line-height: 1.4;
+}
 
-  .el-collapse /deep/ .el-collapse-item__header {
-    font-size: 16px;
-  }
+.el-collapse /deep/ .el-collapse-item__header {
+  font-size: 16px;
+}
 
-  .input-with-select /deep/ .el-input-group__prepend {
-    background-color: #FFF;
-  }
+.input-with-select /deep/ .el-input-group__prepend {
+  background-color: #FFF;
+}
 </style>

@@ -1,4 +1,4 @@
-@import 'public';
+@import 'base.scss';
 
 // 补丁 base
 @import '~@/assets/style/fixed/base.scss';
@@ -143,4 +143,10 @@ $sizes: (0, 5, 10, 15, 20);
 
 .#{$prefix}-pl {
   padding-left: 20px !important;
+}
+
+// 过期样式
+.#{$prefix}-expired {
+  color: $color-text-placehoder;
+  text-decoration: line-through;
 }

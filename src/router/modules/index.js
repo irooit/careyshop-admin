@@ -11,7 +11,7 @@ export default {
     {
       path: 'index',
       name: 'index',
-      meta: { title: '首页', auth: true },
+      meta: { title: '首页', cache: true, auth: true },
       component: () => import('@/views/index/index')
     },
     {
@@ -34,7 +34,8 @@ export default {
       hidden: true,
       component: {
         beforeRouteEnter(to, from, next) {
-          next(instance => instance.$router.replace(from.fullPath))
+          from.meta[`__stamp-${from.path}`] = Date.now()
+          next(instance => instance.$router.replace({ path: from.fullPath, meta: from.meta }))
         },
         render: h => h()
       }

@@ -133,11 +133,11 @@ export default {
 </script>
 
 <style scoped>
-  .more-filter {
-    margin-bottom: -18px;
-  }
+.more-filter {
+  margin-bottom: -18px;
+}
 
-  .more-filter >>> label {
-    width: auto;
-  }
+.more-filter >>> label {
+  width: auto;
+}
 </style>
